@@ -1,0 +1,217 @@
+
+*{
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body{
+  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("../resources/login/Bottles.png");
+  background-repeat: repeat;
+  height: 100%;
+  margin: auto;
+  width: 100%;
+}
+
+.formContainer{
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.formWrapper{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+.formWrapper .title{
+  background: #2257b9;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 45px;
+  font-weight: 600;
+  padding: 20px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formWrapper form{
+  padding: 25px 25px 25px 25px;
+}
+
+.formWrapper form .row{
+  height: 50px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.formWrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+form .row input:focus{
+  border-color: #2257b9;
+  box-shadow: inset 0px 0px 2px 2px rgba(19, 74, 145, 0.32);
+}
+
+
+.formWrapper .img1 {
+  position: absolute;
+  height : 50px;
+  width : 50px;
+  padding: 5px;
+  margin : 0px auto;
+}
+
+.formWrapper .img2 {
+  position: absolute;
+  height : 50px;
+  width : 50px;
+  padding: 5px;
+  margin : 0px auto;
+}
+
+.formWrapper form .button input{
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  background: #2257b9;
+  margin: -5px auto;
+  padding: 5px 0px 5px 5px;
+  border-radius: 5px;
+  border: 1px solid #2257b9;
+  cursor: pointer;
+}
+
+form .button input:hover{
+  background: #0c3c85;
+}
+
+
+
+.showpass{
+  text-align: left;
+  margin: 10px 20px 10px 10px;
+  color: #000000;
+  font-size: 20px;
+  font-family: "Georgia", Georgia, serif;
+}
+
+.showpass .switch {
+  margin: -45px 140px auto;
+  display: inline-block;
+  height: 30px;
+  position: absolute;
+  width: 60px;
+}
+
+
+.showpass .slider {
+  position: absolute;
+  background-color: #d75858;
+  cursor: pointer;
+  top: 0; bottom: 0; left: 0; right: 0;
+  transition: .5s;
+}
+
+.showpass .slider.round {
+  border-radius: 35px;
+}
+
+.showpass .slider.round:before {
+  border-radius: 50%;
+}
+
+.showpass .slider:before {
+  position: absolute;
+  background-color: #fff;
+  content: "";
+  height: 25px;
+  width: 25px;
+  bottom: 3px; left: 4px;
+  transition: .5s;
+
+}
+
+.showpass input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+.showpass input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+
+
+
+
+
+.signup {
+  background-color: #1899bd;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Georgia", Georgia, serif;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0 10px 3px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.signup:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+.forgotuser {
+  position: relative;
+  background-color: #1899bd;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Georgia", Georgia, serif;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0 10px 3px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.forgotuser:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+.forgotpass {
+  position: relative;
+  background-color: #1899bd;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Georgia", Georgia, serif;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0 10px 3px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.forgotpass:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+
+

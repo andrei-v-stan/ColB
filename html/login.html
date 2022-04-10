@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/login.css">
+  <script src="../js/login.js"></script>
+</head>
+
+<body>
+
+
+<div class="formContainer">
+  <div class="formWrapper">
+
+    <div class="title">
+      <span>Login Form</span>
+    </div>
+
+    <form action="#">
+
+
+
+      <div class="row">
+        <img class="img1" src="../resources/login/Person.png" />
+        <input type="text" placeholder="Username" required>
+      </div>
+
+      <div class="row">
+        <img class="img2" src="../resources/login/Lock.png" />
+        <input type="password" placeholder="Password" id="showLPass" required>
+      </div>
+
+      <div class="showpass">
+        <p>Show password</p>
+
+        <label class="switch" for="checkbox">
+          <input type="checkbox" id="checkbox" onclick="showLoginPass()">
+          <div class="slider round"></div>
+        </label>
+      </div>
+
+      <div class="row button">
+        <input type="submit" value="Login">
+      </div>
+
+        <a href="../html/signup.html" class="signup">Sign Up Today</a>
+        <a href="https://google.com" class="forgotuser">Forgot Username</a>
+        <a href="https://google.com" class="forgotpass">Forgot Password</a>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+</body>
+</html>

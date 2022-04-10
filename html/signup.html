@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sign Up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/signup.css">
+  <script src="../js/signup.js"></script>
+</head>
+
+<body>
+
+
+<div class="formContainer">
+  <div class="formWrapper">
+
+    <div class="title">
+      <span>Sign Up Form</span>
+    </div>
+
+    <form action="#">
+
+
+      <div class="row">
+        <img class="img1" src="../resources/signup/Person.png" />
+        <input type="text" placeholder="Username" required>
+      </div>
+
+      <div class="row">
+        <img class="img3" src="../resources/signup/At.png" />
+        <input type="email" placeholder="Email" id="email" onkeyup="checkEmail()" required>
+      </div>
+
+      <div class="row">
+        <img class="img3" src="../resources/signup/At.png" />
+        <input type="email" placeholder="Confirm email" id="confirmEmail" onkeyup="checkEmail()" required>
+      </div>
+
+      <div class="emailCheck">
+        <span id='emailCheck'></span>
+      </div>
+
+      <div class="row">
+        <img class="img2" src="../resources/signup/Lock.png" />
+        <input type="password" placeholder="Password" id="password" onkeyup="checkPass()" required>
+      </div>
+
+      <div class="row">
+        <img class="img2" src="../resources/signup/Lock.png" />
+        <input type="password" placeholder="Confirm password" id="confirmPassword" onkeyup="checkPass()" required>
+      </div>
+
+      <div class="passwordCheck">
+        <span id='passwordCheck'></span>
+      </div>
+
+      <div class="showpass">
+        <p>Show passwords</p>
+
+        <label class="switch" for="checkbox">
+          <input type="checkbox" id="checkbox" onclick="showPass()">
+          <div class="slider round"></div>
+        </label>
+      </div>
+
+      <div class="row button">
+        <input type="submit" value="Sign Up">
+      </div>
+
+      <div class="account">
+        <div class="accountTxt">
+          <p>Already have an account?</p>
+        </div>
+        <a href="../html/login.html" class="login">Login</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+</body>
+</html>
