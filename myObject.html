@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="myObj.css">
+	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>myObj</title>
@@ -9,41 +10,105 @@
 <body>
 
 <div class="container">
-  <nav>Navbar</nav>
-  <main>Images</main>
-  <div id="sidebar">Other Options</div>
-  <div id="content1">Location Info
-  	<ul>
-  		<li>Country</li>
-  		<li>municipiu</li>
-  		<li>City</li>
-  	</ul>
-  </div>
-  <div id="content2">Product Info
-   <ul>
-   	<li>Type</li>
-   	<li>Perioud of use</li>
-   	<li>Fabrication year</li>
-   	<li>Label</li>
-   </ul>
-   </div>
-  <div id="content3">History
-  	<ul>
-  		<li>where it was made</li>
-  		<li>where it was bought</li>
-  		<li>details about it</li>
-  	</ul>
-  </div>
-  <footer>
-  	<ul>
-  		<li>Price</li>
-  		<li>Seller</li>
-  		<li>excange options</li>
-  		<li>phone number</li>
-  	</ul>
-  </footer>
+	
+	<nav><form><input type="text" placeholder="NavBar"></form></nav>
+	<div id = "big_img_container" onclick="hideImg()">
+	</div>
+	<img id = "big_img" onclick="nextImg()" src="1.png">
+	<main>
+	 	<button onclick="prevImg()"><</button>
+	 	<img id = "image_display"src="1.png" onclick="showImg()">
+	 	<button onclick="nextImg()">></button>
+	</main>
+	
+	<div class="flex-container" id="sidebar">
+		<div class="options">Option1</div>
+		<div class="options">Option2</div>
+		<div class="options">Option3</div>
+	</div>
+	
+	<div class="flex-container" id="content1">
+		<p class="content_title">Location</p>
+		<ul>
+			<li>Romania</li>
+			<li>municipiu Iasi</li>
+			<li>Iasi</li>
+			<li></li>
+		</ul>
+		</div>
+	
+	<div class="flex-container" id="content2">
+		<p class="content_title">Product</p>
+		<ul>
+		<li>Sticla wiskewy</li>
+		<li>unused</li>
+		<li>made in 2000</li>
+		<li>Scotch</li>
+		</ul>
+	</div>
+	
+	<div class="flex-container" id="content3">
+		<p class="content_title">History</p>
+		<ul>
+			<li>Made in Italy</li>
+			<li>Bought in Italy</li>
+			<li id="double_li">No Details</li>
+		</ul>
+	</div>
+	
+	<footer>
+		<ul>
+			<li>250€</li>
+			<li>Vasile Popescu</li>
+			<li>No excange</li>
+			<li>078542320</li>
+		</ul>
+	</footer>
 </div>
 
-<a href="https://www.youtube.com/watch?v=68O6eOGAGqA">Video Tutorial</a>
+<script type="text/javascript">
+	let index = 0
+	function nextImg() {
+		if (index==0) {
+    		document.getElementById("image_display").src = "2.png";  
+    		document.getElementById("big_img").src = "2.png";  
+    		index++;
+    	}else if (index==1) {
+    		document.getElementById("image_display").src = "3.png";    
+    		document.getElementById("big_img").src = "3.png";
+    		index++;
+    	}else if (index ==2){
+    		document.getElementById("image_display").src = "1.png";
+    		document.getElementById("big_img").src = "1.png";
+    		index = 0;
+    	}
+	};
+	function prevImg(){
+		console.debug(index)
+		if (index==0) {
+			document.getElementById("image_display").src = "3.png";
+			document.getElementById("big_img").src = "3.png";
+			index = 2;   
+		}else if (index ==1) {
+			document.getElementById("image_display").src = "1.png";
+			document.getElementById("big_img").src = "1.png";
+			index--;   
+		}else if (index ==2) {
+			document.getElementById("image_display").src = "2.png";
+			document.getElementById("big_img").src = "2.png";
+			index--;   
+		}
+	};
+	function showImg(){
+		document.getElementById("big_img").style.cssText = "display:block"
+		document.getElementById("big_img_container").style.cssText = "display:block"
+
+	}
+	function hideImg(){
+		document.getElementById("big_img").style.cssText = "display:none"
+		document.getElementById("big_img_container").style.cssText = "display:none"
+
+	}
+</script>
 </body>
 </html>
