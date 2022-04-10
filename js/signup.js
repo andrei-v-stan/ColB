@@ -1,3 +1,4 @@
+
 function showPass(){
     const fields = [password, confirmPassword]
 
@@ -10,34 +11,24 @@ function showPass(){
     });
 }
 
-var password = document.getElementById("password")
-    , confirm_password = document.getElementById("confirm_password");
-
-function validatePassword(){
-    if(password.value != confirm_password.value) {
-        confirm_password.setCustomValidity("The passwords entered don't match");
+var checkPass = function() {
+    if (document.getElementById('password').value == document.getElementById('confirmPassword').value) {
+        document.getElementById('passwordCheck').style.color = 'green';
+        document.getElementById('passwordCheck').innerHTML = 'The passwords match';
     } else {
-        confirm_password.setCustomValidity("The passwords entered don't match");
+        document.getElementById('passwordCheck').style.color = 'red';
+        document.getElementById('passwordCheck').innerHTML = 'The passwords do not match';
     }
 }
 
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
-
-
-var email = document.getElementById("email")
-    , confirm_email = document.getElementById("confirmEmail");
-
-function validateEmail(){
-    if(email.value != confirm_email.value) {
-        confirm_email.setCustomValidity("The emails entered don't match");
+var checkEmail = function() {
+    if (document.getElementById('email').value == document.getElementById('confirmEmail').value) {
+        document.getElementById('emailCheck').style.color = 'green';
+        document.getElementById('emailCheck').innerHTML = 'The email addresses match';
     } else {
-        confirm_email.setCustomValidity("The emails entered don't match");
+        document.getElementById('emailCheck').style.color = 'red';
+        document.getElementById('emailCheck').innerHTML = 'The email addresses do not match';
     }
 }
-
-email.onchange = validateEmail;
-confirm_email.onkeyup = validateEmail;
-
 
 

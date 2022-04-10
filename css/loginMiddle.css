@@ -5,7 +5,7 @@
 }
 
 body{
-  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("../resources/signup/Bottles.png");
+  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("../resources/login/Bottles.png");
   background-repeat: repeat;
   height: 100%;
   margin: auto;
@@ -25,10 +25,10 @@ body{
 }
 
 .formWrapper .title{
-  background: #22b9b9;
+  background: #2257b9;
   border-radius: 5px 5px 0 0;
   color: #fff;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 600;
   padding: 20px 5px;
   display: flex;
@@ -58,8 +58,8 @@ body{
 }
 
 form .row input:focus{
-  border-color: #22b9b9;
-  box-shadow: inset 0px 0px 2px 2px rgba(19, 134, 145, 0.32);
+  border-color: #2257b9;
+  box-shadow: inset 0px 0px 2px 2px rgba(19, 74, 145, 0.32);
 }
 
 
@@ -79,29 +79,20 @@ form .row input:focus{
   margin : 0px auto;
 }
 
-.formWrapper .img3 {
-  position: absolute;
-  height : 50px;
-  width : 50px;
-  padding: 5px;
-  margin : 0px auto;
-}
-
-
 .formWrapper form .button input{
   color: #fff;
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
-  background: #22b9b9;
+  background: #2257b9;
   margin: -5px auto;
   padding: 5px 0px 5px 5px;
   border-radius: 5px;
-  border: 1px solid #22b9b9;
+  border: 1px solid #2257b9;
   cursor: pointer;
 }
 
 form .button input:hover{
-  background: #0c7785;
+  background: #0c3c85;
 }
 
 
@@ -163,7 +154,58 @@ form .button input:hover{
 
 
 
-.login {
+.signup {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  background-color: #1899bd;
+  color: white;
+  font-size: 20px;
+  font-family: "Georgia", Georgia, serif;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0 10px 0px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.signup:hover{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  color: black;
+  text-decoration: underline;
+}
+
+.forgotuser {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  background-color: #1899bd;
+  color: white;
+  font-size: 20px;
+  font-family: "Georgia", Georgia, serif;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0 10px 4px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.forgotuser:hover{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  color: black;
+  text-decoration: underline;
+}
+
+.forgotpass {
+  width: 100%;
+  text-align: center;
+  position: relative;
   background-color: #1899bd;
   color: white;
   text-align: center;
@@ -171,43 +213,18 @@ form .button input:hover{
   font-family: "Georgia", Georgia, serif;
   text-decoration: none;
   display: inline-block;
-  margin: 0 0 0 0;
+  margin: 0 0 10px 4px;
   padding: 10px 10px 10px 10px;
   cursor: pointer;
   border-radius: 12px;
 }
 
-.login:hover{
+.forgotpass:hover{
+  width: 100%;
+  text-align: center;
+  position: relative;
   color: black;
   text-decoration: underline;
-}
-
-
-.account{
-  text-align: center;
-}
-
-.accountTxt{
-  color: #000000;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: "Georgia", Georgia, serif;
-  margin: -15px 0 -15px 0;
-}
-
-
-.emailCheck{
-  text-align : left;
-  font-size: 15px;
-  font-weight : bold;
-  margin: 0 0 10px 0;
-}
-
-.passwordCheck{
-  text-align : left;
-  font-size: 15px;
-  font-weight : bold;
-  margin: 0 0 10px 0;
 }
 
 

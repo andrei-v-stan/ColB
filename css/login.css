@@ -7,7 +7,9 @@
 body{
   background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("../resources/login/Bottles.png");
   background-repeat: repeat;
-  overflow: hidden;
+  height: 100%;
+  margin: auto;
+  width: 100%;
 }
 
 .formContainer{
@@ -160,7 +162,7 @@ form .button input:hover{
   font-family: "Georgia", Georgia, serif;
   text-decoration: none;
   display: inline-block;
-  margin: 0 0 10px 0px;
+  margin: 0 0 10px 3px;
   padding: 10px 10px 10px 10px;
   cursor: pointer;
   border-radius: 12px;
@@ -180,7 +182,7 @@ form .button input:hover{
   font-family: "Georgia", Georgia, serif;
   text-decoration: none;
   display: inline-block;
-  margin: 0 0 10px 4px;
+  margin: 0 0 10px 3px;
   padding: 10px 10px 10px 10px;
   cursor: pointer;
   border-radius: 12px;
@@ -200,7 +202,7 @@ form .button input:hover{
   font-family: "Georgia", Georgia, serif;
   text-decoration: none;
   display: inline-block;
-  margin: 0 0 10px 4px;
+  margin: 0 0 10px 3px;
   padding: 10px 10px 10px 10px;
   cursor: pointer;
   border-radius: 12px;
