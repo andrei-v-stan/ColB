@@ -1,0 +1,106 @@
+.containerM {
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+.menuShortcut {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    width: 75px;
+    margin: 0 0 0 -75px;
+    list-style: none;
+}
+
+.menuShortcut-button {
+    position: absolute;
+    left: 45%;
+    top: 17px;
+    width: 80px;
+    height: 80px;
+    margin: -50px 0 0 0;
+    border-radius: 30%;
+    background-image: url('../resources/menu/Click.png'), linear-gradient(#196dcc, #439db7);
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    border: 2px #282b2d solid;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#menuShortcut-foreground {
+    z-index: 1;
+}
+
+#menuShortcut-background {
+    z-index: -1;
+}
+
+.menuShortcut-Search {
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 1.25s;
+    background-image: url('../resources/menu/SearchR.png'), linear-gradient(#196dcc, #439db7);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px #282b2d solid;
+    background-size: 70px 70px;
+}
+
+.menuShortcut-Post {
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 1.0s;
+    background-image: url('../resources/menu/PostR.png'), linear-gradient(#196dcc, #439db7);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px #282b2d solid;
+    background-size: 70px 70px;
+}
+
+.menuShortcut-Info {
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 1.5s;
+    background-image: url('../resources/menu/InfoR.png'), linear-gradient(#196dcc, #439db7);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px #282b2d solid;
+    background-size: 100px 100px;
+}
+
+.menuProfile-button {
+    position: absolute;
+    right: 3px;
+    top: 10px;
+    width: 70px;
+    height: 70px;
+    margin: 0 0 0 0;
+    border-radius: 50%;
+    background-image: url('../resources/menu/Person.png'), linear-gradient(#196dcc, #439db7);
+    background-repeat: no-repeat;
+    background-size: 67px 67px;
+    border: 2px #282b2d solid;
+    overflow: hidden;
+    cursor: pointer;
+}

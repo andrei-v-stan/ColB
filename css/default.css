@@ -1,0 +1,24 @@
+
+*{
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+
+body{
+    background: rgb(0,8,112);
+    background: radial-gradient(circle, rgba(0,8,112,1) 0%, rgba(0,186,255,1) 30%, rgba(73,110,233,1) 75%);
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+
+#default h1 {
+    top: 150px;
+    font-size: 75px;
+    position: relative;
+    text-align: center;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

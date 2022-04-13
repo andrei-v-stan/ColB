@@ -5,26 +5,25 @@
 }
 
 body{
-  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("../resources/signup/Bottles.png");
-  background-repeat: repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("../resources/signup/Bottles.png"), repeat;
   height: 100%;
   margin: auto;
   width: 100%;
 }
 
-.formContainer{
+.SignUp-Container{
   max-width: 600px;
   margin: 100px auto;
   padding: 0 20px;
 }
 
-.formWrapper{
+.SignUp-Wrap{
   background: #fff;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
 }
 
-.formWrapper .title{
+.SignUp-Wrap .title{
   background: #22b9b9;
   border-radius: 5px 5px 0 0;
   color: #fff;
@@ -36,17 +35,17 @@ body{
   justify-content: center;
 }
 
-.formWrapper form{
+.SignUp-Wrap form{
   padding: 25px 25px 25px 25px;
 }
 
-.formWrapper form .row{
+.SignUp-Wrap form .row{
   height: 50px;
   margin-bottom: 15px;
   position: relative;
 }
 
-.formWrapper form .row input{
+.SignUp-Wrap form .row input{
   height: 100%;
   width: 100%;
   outline: none;
@@ -63,7 +62,7 @@ form .row input:focus{
 }
 
 
-.formWrapper .img1 {
+.SignUp-Wrap .img1 {
   position: absolute;
   height : 50px;
   width : 50px;
@@ -71,7 +70,7 @@ form .row input:focus{
   margin : 0px auto;
 }
 
-.formWrapper .img2 {
+.SignUp-Wrap .img2 {
   position: absolute;
   height : 50px;
   width : 50px;
@@ -79,7 +78,7 @@ form .row input:focus{
   margin : 0px auto;
 }
 
-.formWrapper .img3 {
+.SignUp-Wrap .img3 {
   position: absolute;
   height : 50px;
   width : 50px;
@@ -88,7 +87,7 @@ form .row input:focus{
 }
 
 
-.formWrapper form .button input{
+.SignUp-Wrap form .button input{
   color: #fff;
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
@@ -209,6 +208,5 @@ form .button input:hover{
   font-weight : bold;
   margin: 0 0 10px 0;
 }
-
 
 
