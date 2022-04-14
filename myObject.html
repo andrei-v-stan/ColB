@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<link rel="stylesheet" type="text/css" href="myObj.css">
 	
@@ -14,10 +14,10 @@
 	<nav><form><input type="text" placeholder="NavBar"></form></nav>
 	<div id = "big_img_container" onclick="hideImg()">
 	</div>
-	<img id = "big_img" onclick="nextImg()" src="1.png">
+	<img id = "big_img" onclick="nextImg()" src="1.png" alt="imagine">
 	<main>
-	 	<button onclick="prevImg()"><</button>
-	 	<img id = "image_display"src="1.png" onclick="showImg()">
+	 	<button onclick="prevImg()"></button>
+	 	<img id = "image_display" src="1.png" alt="imagine" onclick="showImg()">
 	 	<button onclick="nextImg()">></button>
 	</main>
 	
@@ -66,7 +66,7 @@
 	</footer>
 </div>
 
-<script type="text/javascript">
+<script>
 	let index = 0
 	function nextImg() {
 		if (index==0) {
