@@ -1,0 +1,110 @@
+button {
+  all: unset;
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  background: #191a1d;
+  font-family: "Karla", sans-serif;
+  width: 100vw;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+
+nav {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.menuitem {
+  position: relative;
+  left: 50px;
+  top: 0%;
+  display: none;
+  /* opacity: 0; */
+  cursor: pointer;
+  /* position: absolute; */
+  /* left: 200px; */
+  /* left: 22%;
+    top: 0%; */
+  /* pointer-events: none; */
+}
+
+nav > menu > .menuitem {
+  /* pointer-events: all; */
+  /* opacity: 1; */
+  display: block;
+}
+
+menu .menuitem button {
+  white-space: nowrap;
+  display: block;
+}
+
+.menuitem:hover > menu > .menuitem,
+menu:hover > .menuitem {
+  /* opacity: 1; */
+  display: block;
+}
+
+/* nav > menu > .menuitem .menuitem menu {
+  transform: translateX(100%);
+  top: 0;
+  right: 0;
+} */
+
+button {
+  background: #75f;
+  color: #fff;
+  min-width: 190px;
+  transition: background 0.5s, color 0.5s, transform 0.5s;
+  margin: 0px 6px 6px 0px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+button:hover:before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+}
+
+.share-btn {
+  background-color: rgb(255, 204, 85);
+}
+
+.share-btn:focus {
+  background-color: deeppink;
+}
+
+.info {
+  display: flex;
+  background-color: hsl(225, 7%, 50%);
+  color: white;
+  width: 30%;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 40px;
+  
+}
