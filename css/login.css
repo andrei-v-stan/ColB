@@ -5,26 +5,25 @@
 }
 
 body{
-  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("../resources/login/Bottles.png");
-  background-repeat: repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("../resources/login/Bottles.png"), repeat;
   height: 100%;
   margin: auto;
   width: 100%;
 }
 
-.formContainer{
+.Login-Container{
   max-width: 600px;
   margin: 100px auto;
   padding: 0 20px;
 }
 
-.formWrapper{
+.Login-Wrap{
   background: #fff;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
 }
 
-.formWrapper .title{
+.Login-Wrap .title{
   background: #2257b9;
   border-radius: 5px 5px 0 0;
   color: #fff;
@@ -36,17 +35,17 @@ body{
   justify-content: center;
 }
 
-.formWrapper form{
+.Login-Wrap form{
   padding: 25px 25px 25px 25px;
 }
 
-.formWrapper form .row{
+.Login-Wrap form .row{
   height: 50px;
   margin-bottom: 15px;
   position: relative;
 }
 
-.formWrapper form .row input{
+.Login-Wrap form .row input{
   height: 100%;
   width: 100%;
   outline: none;
@@ -59,33 +58,33 @@ body{
 
 form .row input:focus{
   border-color: #2257b9;
-  box-shadow: inset 0px 0px 2px 2px rgba(19, 74, 145, 0.32);
+  box-shadow: inset 0 0 2px 2px rgba(19, 74, 145, 0.32);
 }
 
 
-.formWrapper .img1 {
+.Login-Wrap .img1 {
   position: absolute;
   height : 50px;
   width : 50px;
   padding: 5px;
-  margin : 0px auto;
+  margin : 0 auto;
 }
 
-.formWrapper .img2 {
+.Login-Wrap .img2 {
   position: absolute;
   height : 50px;
   width : 50px;
   padding: 5px;
-  margin : 0px auto;
+  margin : 0 auto;
 }
 
-.formWrapper form .button input{
+.Login-Wrap form .button input{
   color: #fff;
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
   background: #2257b9;
   margin: -5px auto;
-  padding: 5px 0px 5px 5px;
+  padding: 5px 0 5px 5px;
   border-radius: 5px;
   border: 1px solid #2257b9;
   cursor: pointer;
@@ -212,6 +211,5 @@ form .button input:hover{
   color: black;
   text-decoration: underline;
 }
-
 
 
