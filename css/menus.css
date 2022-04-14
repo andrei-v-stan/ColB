@@ -99,7 +99,7 @@
     border-radius: 50%;
     background-image: url('../resources/menu/Person.png'), linear-gradient(#196dcc, #439db7);
     background-repeat: no-repeat;
-    background-size: 67px 67px;
+    background-size: 70px 70px;
     border: 2px #282b2d solid;
     overflow: hidden;
     cursor: pointer;

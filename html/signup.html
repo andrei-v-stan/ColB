@@ -45,17 +45,19 @@
 
       <div class="row">
         <img class="img1" src="../resources/signup/Person.png" alt="SignUpPerson"/>
-        <input type="text" placeholder="Username" required>
+        <label>
+          <input type="text" placeholder="Username" required>
+        </label>
       </div>
 
       <div class="row">
         <img class="img3" src="../resources/signup/At.png" alt="SignUpAt1"/>
-        <input type="email" placeholder="Email" id="email" onkeyup="checkEmail()" required>
+        <label for="email"></label><input type="email" placeholder="Email" id="email" onkeyup="checkEmail()" required>
       </div>
 
       <div class="row">
         <img class="img3" src="../resources/signup/At.png" alt="SignUpAt2"/>
-        <input type="email" placeholder="Confirm email" id="confirmEmail" onkeyup="checkEmail()" required>
+        <label for="confirmEmail"></label><input type="email" placeholder="Confirm email" id="confirmEmail" onkeyup="checkEmail()" required>
       </div>
 
       <div class="emailCheck">
@@ -64,12 +66,12 @@
 
       <div class="row">
         <img class="img2" src="../resources/signup/Lock.png" alt="SignUpLock1"/>
-        <input type="password" placeholder="Password" id="password" onkeyup="checkPass()" required>
+        <label for="password"></label><input type="password" placeholder="Password" id="password" onkeyup="checkPass()" required>
       </div>
 
       <div class="row">
         <img class="img2" src="../resources/signup/Lock.png" alt="SignUpLock2"/>
-        <input type="password" placeholder="Confirm password" id="confirmPassword" onkeyup="checkPass()" required>
+        <label for="confirmPassword"></label><input type="password" placeholder="Confirm password" id="confirmPassword" onkeyup="checkPass()" required>
       </div>
 
       <div class="passwordCheck">
