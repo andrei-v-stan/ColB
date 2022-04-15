@@ -1,0 +1,96 @@
+
+*{
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+
+body{
+    background-image: url('../resources/index/BackgroundR.gif');
+    background-size: 2000px 1200px;
+    height: auto;
+    width: auto;
+}
+
+#default h1 {
+    font-size: 75px;
+    position: absolute;
+    margin: 325px 0 0 0;
+    text-align: center;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-delay: 7s;
+    animation: fadeIn ease 4s;
+}
+
+
+.buttonGrad {
+    text-align: center;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    padding: .5em 2em .55em;
+    border-radius: .5em;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+}
+.buttonGrad:hover {
+    text-decoration: none;
+}
+.buttonGrad:active {
+    position: relative;
+    top: 1px;
+}
+
+.cyanB {
+    color: #000000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1ae7fa), to(#1a8afa));
+}
+.cyanB:hover {
+    background: #20f4ed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1a8afa), to(#2043f4));
+}
+.cyanB:active {
+    color: #a5fce8;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1a8afa), to(#651afa));
+}
+
+.welcomeResp {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 400px;
+}
+
+.welcomeAnimation {
+    position: absolute;
+    margin: 0px 0 0 0;
+    text-align: center;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    animation: fadeIn ease 8s, moveTo ease-in-out 4s;
+
+}
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@keyframes moveTo {
+    0% {
+        top: -200px;
+    }
+    100% {
+        top: 7.5px;
+    }
+}
