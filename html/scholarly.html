@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Scholarly</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="../resources/scholarly/Scholarly.ico"/>
+        <link rel="stylesheet" href="../css/scholarly.min.css">
+        <link rel="stylesheet" href="../css/imgSbS.css">
+    </head>
+
+    <body prefix="schema: http://schema.org" style="font-family: 'Times New Roman', Times, serif; font-size: 15pt;">
+        <header>
+            <h1>Class Manager</h1>
+        </header>
+            <div role="contentinfo">
+                <ol role="directory">
+                    <li>
+                        <a href="#abstract">
+                            <span>1. </span>Abstract
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#introduction">
+                            <span>2. </span>Introduction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#motivation">
+                            <span>3. </span>Motivation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#functionalities">
+                            <span>4. </span> Project functionalities
+                        </a>
+                            <ol role="directory">
+                                <li>
+                                    <a href="#shortcuts"><span>4.1 </span>Menu shortcuts</a>
+                                </li>
+                                <li>
+                                    <a href="#login"><span>4.2 </span>Login </a>
+                                </li>
+                                <li>
+                                    <a href="#signup"><span>4.3 </span>Sign-Up</a>
+                                </li>
+                                <li>
+                                    <a href="#post"><span>4.4 </span>Post</a>
+                                </li>
+                                <li>
+                                    <a href="#search"><span>4.5 </span>Search</a>
+                                </li>
+                                <li>
+                                    <a href="#index"><span>4.6 </span>Index</a>
+                                </li>
+                            </ol>
+                    </li>
+                    <li>
+                        <a href="#collaboration">
+                            <span>5. </span>Collaboration
+                        </a>
+                        <ol role="directory">
+                            <li>
+                                <a href="#discord"><span>5.1 </span>Discord</a>
+                            </li>
+                            <li>
+                                <a href="#github"><span>5.2 </span>Github</a>
+                            </li>
+                            <li>
+                                <a href="#contributions"><span>5.3 </span>Contributions</a>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#conclusions">
+                            <span>6. </span>Conclusions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#references">
+                            <span>7. </span>References
+                        </a>
+                    </li>
+                </ol>
+
+                <dl>
+                    <dt>Authors</dt>
+                    <dd>
+                            <ul>
+                              <li property="schema:author" typeof="sa:ContributorRole">
+                                <a property="schema:author" href="https://github.com/andreistan2077" typeof="schema:Person">
+                                    <span property="schema:familyName">Stan</span>
+                                    <span property="schema:givenName">Andrei-Vladut</span>
+                                </a>
+                              </li>
+                              <li property="schema:author" typeof="sa:ContributorRole">
+                                <a property="schema:author" href="https://github.com/a-emanuel" typeof="schema:Person">
+                                    <span property="schema:familyName">Anton</span>
+                                    <span property="schema:givenName">Emanuel</span>
+                                </a>
+                              </li>
+                              <li property="schema:author" typeof="sa:ContributorRole">
+                                <a property="schema:author" href="https://github.com/VisnevschiV" typeof="schema:Person">
+                                    <span property="schema:familyName">Vladislav</span>
+                                    <span property="schema:givenName">Visnevschi</span>
+                                </a>
+                              </li>
+                            </ul>
+                    </dd>
+                    <dt>List of projects</dt>
+                    <dd>
+                        <a href="https://docs.google.com/document/d/e/2PACX-1vSr1vBKPHRrRGim-ygEE5DNtI4DKuVVC_C5QJuataA5N59_6r2CnoB58h2FPyGIVPpFxnqJoS_NEQEi/pub#h.mqxmf5oq3a1g">Original project description</a>
+                    </dd>
+                </dl>
+            </div>
+
+            <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+                <h2><span>1. </span>Abstract</h2>
+                <p>
+                    Collecting Bottles on Web (ColB) is a handy tool constructed using web technologies.
+                    Created due to the lack of a platform for those with a passion for containers (yes, oddly specific, we know).
+                    Due to large range of content that can be provided by its users, it is an enjoyable tool to have.
+                </p>
+            </section>
+
+            <section typeof="sa:Introduction" id="introduction" role="doc-introduction">
+                <h2><span>2. </span>Introduction</h2>
+                <p>
+                    Collecting Bottles on Web is a tool that we have created as our project for Web Technologies, the capabilities of the website are the following :
+                </p>
+                    <ul>
+                        <li>
+                            User account creation and login
+                        </li>
+                        <li>
+                            Search for items & filter posts based on tags with checkboxes
+                        </li>
+                        <li>
+                            Each user has their own inventory table with categories, sub-categories and items
+                        </li>
+                        <li>
+                            A logged-in user can create posts with their containers and their desired details
+                        </li>
+                        <li>
+                            A user can select one (maybe more items) to share by the click of a button
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            An admin can connect to their account and they have the same features as a normal user, aside of some extra ones :
+                        </li>
+                        <li style="list-style: none;">
+                        <ul >
+                            <li>
+                                They're able to export stats via CSV and PDF
+                            </li>
+                            <li>
+                                They're able to export a ranking of the most popular containers as a RSS data flux
+                            </li>
+                        </ul>
+                        </li>
+
+                    </ul>
+            </section>
+            <section typeof="sa:Motivation" id="motivation" role="doc-prologue">
+                <h2><span>3. </span>Motivation</h2>
+                <p>
+                    We chose this project to challenge ourselves, to discover what it takes to make such a specific tool considering the absence of such a concept.
+                    A application so similar to the concepts of the well known social media and classified advertisement platforms and yet so different.
+                </p>
+            </section>
+            <section typeof="sa:MaterialsAndMethods" id="functionalities" role="doc-chapter">
+                <h2><span>4. </span>Project functionalities</h2>
+                <p>
+                    In this part of the document we will present the functionalities of our application and how they work (what files do what and so on).
+                </p>
+
+                    <section typeof="sa:MaterialsAndMethods" id="shortcuts" role="doc-chapter">
+                        <h3><span>4.1 </span>Menu shortcuts</h3>
+                        <div class="row">
+                            <div class="column">
+                                <img src="../resources/scholarly/shortcutMenu.png" alt="scholarlyMenu" style="width:100%; height:75%;">
+                            </div>
+                            <div class="column">
+                                <img src="../resources/scholarly/menus.png" alt="scholarlyMenus" style="width:250%; height:50%;">
+                            </div>
+                        </div>
+                        <p>
+                            The menu and profile shortcuts are on most pages and are designed using <a href="../css/menus.css">this css</a> and the animation of the menu being done using <a href="../js/menus.js">this js</a>.
+                        </p>
+                    </section>
+
+                    <section typeof="sa:MaterialsAndMethods" id="login" role="doc-chapter">
+                        <h3><span>4.2 </span>Login</h3>
+                        <img src="../resources/scholarly/login.png" alt="ScholarlyLogin" style="width:50%; height:50%">
+                        <p>
+                            The login page is a simple form in which the users and admin will be able to connect via <a href="../html/login.html">this page</a>, which has been designed using <a href="../css/login.css">this css</a> and the functionalities such as showing your password using <a href="../js/login.js">this js</a>. The data given will be checked with the database to see if the account exists and then processed accordingly.
+                        </p>
+                        <p>
+                            Aside of these elements, the login page also has 3 buttons that redirect you accordingly (to the sign-up, forgot username and forgot password form), the page also has menu and profile shortcuts.
+                        </p>
+                    </section>
+
+                    <section typeof="sa:MaterialsAndMethods" id="signup" role="doc-chapter">
+                        <h3><span>4.3 </span>Sign-Up</h3>
+                        <img src="../resources/scholarly/signup.png" alt="ScholarlySignUp" style="width:50%; height:50%">
+                        <p>
+                            The signup page is a simple form in which the users will be able to create a account via <a href="../html/signup.html">this page</a>, which has been designed using <a href="../css/signup.css">this css</a> and the functionalities such as checking if your emails and passwords match, using <a href="../js/signup.js">this js</a>. The data given will be checked with the database to see if the account exists and if not, then processed accordingly.
+                        </p>
+                        <p>
+                            Aside of these elements, the signup page also has a button which returns you to the login page along with the menu and profile shortcuts.
+                        </p>
+                    </section>
+
+                    <section typeof="sa:MaterialsAndMethods" id="post" role="doc-chapter">
+                        <h3><span>4.4 </span>Post</h3>
+                        <img src="../resources/scholarly/post.png" alt="ScholarlyPost" style="width:50%; height:50%">
+                        <p>
+                            The post page is a simple form in which the users and admin will to write down and upload pictures in regard to their container of choice <a href="../html/post.html">this page</a>, which has been designed using <a href="../css/post.css">this css</a> and the functionalities such as showing your password using <a href="../js/post.js">this js</a>.
+                        </p>
+                    </section>
+
+                    <section typeof="sa:MaterialsAndMethods" id="search" role="doc-chapter">
+                        <h3><span>4.5 </span>Search</h3>
+                        <img src="../resources/scholarly/search.png" alt="ScholarlySearch" style="width:50%; height:50%">
+                        <p>
+                            The search page is a simple  in which the users and admin will to write down and upload pictures in regard to their container of choice <a href="../html/search.html">this page</a>, which has been designed using <a href="../css/search.css">this css</a>.
+                        </p>
+                    </section>
+
+                    <section typeof="sa:MaterialsAndMethods" id="index" role="doc-chapter">
+                        <h3><span>4.6 </span>Index page </h3>
+                        <img src="../resources/scholarly/home.png" alt="ScholarlySearch" style="width:50%; height:50%">
+                        <p>
+                            This is the start page, a simple <a href="../index.html">webpage</a> in which the users can choose to go to one of the given pages, which has been designed and animated using <a href="../css/index.css">this css</a>.
+                        </p>
+                    </section>
+
+            </section>
+
+            <section typeof="sa:MaterialsAndMethods" id="collaboration" role="doc-chapter">
+                <h2><span>5. </span>How the team worked</h2>
+                <p>
+
+                </p>
+                <section typeof="sa:MaterialsAndMethods" id="discord" role="doc-chapter">
+                    <h3><span>5.1 </span>Discord</h3>
+                    <p>
+                        We used <a href="https://discord.com">Discord</a> as our main communication platform, scheduling meetings, discussing our to do list, understanding the concepts that we had to work on, making project decisions and so on.
+
+                    </p>
+                </section>
+                <section typeof="sa:MaterialsAndMethods" id="github" role="doc-chapter">
+                    <h3><span>5.2 </span>Github</h3>
+                    <p>
+                        For the management of the project and each of it's parts we used Github, updating our branch with whatever we worked on and when we felt like we have improved the project altogether, the team leader would put everything in one place, (if necessary) make some file location error handling and then push it to main.
+                    </p>
+                </section>
+                <section typeof="sa:MaterialsAndMethods" id="contributions" role="doc-chapter">
+                    <h3><span>5.3 </span>Contributions</h3>
+                    <p>
+                        All members contributed to the making of this project, each of us working at our own pace and doing commits when we felt proper, in our own branch. The detailed progress can be seen in the <a href="https://github.com/andreistan2077/ColB/commits/main">commits</a> section, the main branch being used to update the project as a whole.
+                    </p>
+                </section>
+            </section>
+
+            <section id="conclusions">
+                <h2><span>6. </span>Conclusions</h2>
+                <p>
+                     Working on this project, creating a web application from nothing all the way to what it is now allowed us to gain a large amount of knowledge and to appreciate the hard work of professional web developers. Even if our project is not yet finished and there could always be place for improvement, we're glad that we did this.
+                </p>
+            </section>
+
+            <section typeof="sa:ReferenceList" id="references" role="doc-bibliography">
+                <h2><span>7. </span>References</h2>
+                <ul>
+                    <li property="schema:citation" typeof="schema:ScholarlyArticle"  id="Scholarly-html"
+                    resource="https://w3c.github.io/scholarly-html/">
+                        <cite property="schema:name">
+                            <a href="https://w3c.github.io/scholarly-html/">Scholarly HTML</a>
+                        </cite>,
+                        <span property="schema:author" typeof="schema:Person">
+                            <span property="schema:name">Tzviya Siegman (Wiley) </span>&amp;
+                            <span property="schema:name">Robin Berjon</span>
+                        </span>
+                    </li>
+                </ul>
+            </section>
+    </body>
+</html>

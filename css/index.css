@@ -2,6 +2,7 @@
 *{
     box-sizing: border-box;
     font-family: "Times New Roman", Times, serif;
+
 }
 
 body{
@@ -9,21 +10,73 @@ body{
     background-size: 2000px 1200px;
     height: auto;
     width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+
 #default h1 {
-    font-size: 75px;
-    position: absolute;
-    margin: 325px 0 0 0;
+    font-size: 70px;
+    position: relative;
+    margin: 0 0 0 0;
     text-align: center;
     left: 0;
     right: 0;
     z-index: 1;
-    background: -webkit-linear-gradient(#eee, #333);
+    background: linear-gradient(#eee, #333);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
     animation-delay: 7s;
     animation: fadeIn ease 4s;
+}
+
+
+
+.centeringElements{
+    text-align: center;
+}
+
+
+.buttonPlace1 {
+    position: relative;
+    margin: 50px 0 0 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    animation: fadeIn ease 6s;
+}
+
+.buttonPlace2 {
+    position: relative;
+    margin: 15px 0 0 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    animation: fadeIn ease 6s;
+}
+
+.buttonPlace3{
+    text-align: center;
+    position: relative;
+    margin: 15px 0 0 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    animation: fadeIn ease 6s;
+}
+
+.buttonPlace4{
+    text-align: center;
+    position: relative;
+    margin: 15px 0 0 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    animation: fadeIn ease 6s;
 }
 
 
@@ -33,7 +86,7 @@ body{
     outline: none;
     cursor: pointer;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 30px;
     padding: .5em 2em .55em;
     border-radius: .5em;
     box-shadow: 0 1px 2px rgba(0,0,0,.2);
@@ -47,34 +100,80 @@ body{
     top: 1px;
 }
 
+
+.purpleB {
+    color: #000000;
+    background: linear-gradient(to left bottom, #908acb, #6b51bb);
+}
+.purpleB:hover {
+    background: #59479b;
+    background: linear-gradient(to left bottom, #854ee1, #5511c9);
+}
+.purpleB:active {
+    color: #aea1d0;
+    background: linear-gradient(to left bottom, #854ee1, #4818a4);
+}
+
+
 .cyanB {
     color: #000000;
-    background: -webkit-gradient(linear, left top, left bottom, from(#1ae7fa), to(#1a8afa));
+    background: linear-gradient(to left bottom, #1ae7fa, #1a8afa);
 }
 .cyanB:hover {
     background: #20f4ed;
-    background: -webkit-gradient(linear, left top, left bottom, from(#1a8afa), to(#2043f4));
+    background: linear-gradient(to left bottom, #1a8afa, #2043f4);
 }
 .cyanB:active {
     color: #a5fce8;
-    background: -webkit-gradient(linear, left top, left bottom, from(#1a8afa), to(#651afa));
+    background: linear-gradient(to left bottom, #1a8afa, #102cc2);
 }
+
+
+.aquaB {
+    color: #000000;
+    background: linear-gradient(to left bottom, #79c5c2, #14a9a9);
+}
+.aquaB:hover {
+    background: #000000;
+    background: linear-gradient(to left bottom, #79c5ba, #175b53);
+}
+.aquaB:active {
+    color: rgb(142, 203, 182);
+    background: linear-gradient(to left bottom, #17b9ce, #175b4f);
+}
+
+
+.tealB {
+    color: #000000;
+    background: linear-gradient(to left bottom, #1afab7, #0f886b);
+}
+.tealB:hover {
+    background: #20f4ed;
+    background: linear-gradient(to left bottom, #17d3c2, #1bc76b);
+}
+.tealB:active {
+    color: #95dacd;
+    background: linear-gradient(to left bottom, #1bc76b, #0e522e);
+}
+
 
 .welcomeResp {
     width: 100%;
     height: 100%;
     max-width: 800px;
     max-height: 400px;
+
 }
 
 .welcomeAnimation {
-    position: absolute;
-    margin: 0px 0 0 0;
+    position: relative;
+    margin: 0 0 0 0;
     text-align: center;
     left: 0;
     right: 0;
     z-index: 1;
     animation: fadeIn ease 8s, moveTo ease-in-out 4s;
+    display:inline-block;
 
 }
 @keyframes fadeIn {
@@ -91,6 +190,6 @@ body{
         top: -200px;
     }
     100% {
-        top: 7.5px;
+        top: 0;
     }
 }
