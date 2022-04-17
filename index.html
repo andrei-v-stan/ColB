@@ -3,42 +3,43 @@
 
 <head>
 
-  <title>Info</title>
+  <title>Home</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="resources/default/Home.ico"/>
-  <link rel="stylesheet" href="css/default.css">
-  <link rel="stylesheet" href="css/menus.css">
-  <script src="js/menus.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="resources/index/Home.ico"/>
+  <link rel="stylesheet" href="css/index.css">
 
 </head>
 
 
 <body>
 
+<div class="centeringElements">
 
-<div class="containerM">
-
-  <div class="menuShortcut">
-
-    <button id="menuShortcut-foreground" onclick="focusF(); transform()" class="menuShortcut-button" title="Click to open the shortcuts menu"></button>
-    <button id="menuShortcut-background" onclick="focusB(); transformBack()" class="menuShortcut-button" title="Click to close the menu"></button>
-    <div class="menuShortcut-Search" id="search" onclick="openWindow('html/search.html','_self');" ></div>
-    <div class="menuShortcut-Post" id="post" onclick="openWindow('html/post.html','_self');"></div>
-    <div class="menuShortcut-Info" id="info" onclick="openWindow('html/info.html','_self');"></div>
-
+  <div class="welcomeAnimation">
+    <img src="resources/index/WelcomeC.png" alt="IndexWelcome" class="welcomeResp">
   </div>
 
-  <a class="menuProfile-button" href="html/login.html" title="Click to open the menu"></a>
+  <div id="default">
+    <h1>Collecting bottles on Web</h1>
+  </div>
+
+
+  <div class="buttonPlace1">
+    <a href="html/scholarly.html" class="buttonGrad purpleB">Scholarly</a>
+  </div>
+  <div class="buttonPlace2">
+    <a href="html/search.html" class="buttonGrad cyanB">Search</a>
+  </div>
+  <div class="buttonPlace3">
+    <a href="html/post.html" class="buttonGrad aquaB">Post</a>
+  </div>
+  <div class="buttonPlace4">
+    <a href="html/login.html" class="buttonGrad tealB">Login</a>
+  </div>
 
 </div>
-
-<div id="default">
-  <h1>Work In Progress</h1>
-  <h2>However some pages are functional.</h2>
-  <h2>Start exploring by using the button above, or the profile button on the right.</h2>
-</div>
-
 
 </body>
+
 </html>
