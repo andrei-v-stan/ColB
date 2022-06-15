@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/inventory.css" />
+    <script src="../js/inventoryScript.js" defer></script>
+    <script src="../js/inventoryHandleTouch.js" defer></script>
+    <title>Inventory</title>
+  </head>
+  <body>
+    <div class="inventory">
+      <nav>
+        <div class="categories">
+          <div class="category">
+            <button class="btn btn-cat">Categorie 1</button>
+            <div class="subcategories">
+              <div class="subcategory">
+                <button class="btn btn-subcat">Subcategorie 1</button>
+                <div class="items">
+                  <button class="btn btn-item">ITEM 1</button>
+                  <!-- <button class="btn btn-item">
+                    <div class="item-content">
+                      <div class="item-location">
+                        <div>Romania</div>
+                        <div>Municipiu Iasi</div>
+                        <div>Iasi</div>
+                      </div>
+                      <div class="item-info">
+                        <div>Sticla Wiskey</div>
+                        <div>Unused</div>
+                        <div>Made in 2000</div>
+                        <div>Scotch</div>
+                      </div>
+                      <div class="item-history">
+                        <div>Made in Italy</div>
+                        <div>Bought in Italy</div>
+                        <div>No details</div>
+                      </div>
+                    </div>
+                  </button> -->
+                  <button class="btn btn-item">ITEM 2</button>
+                  <button class="btn btn-item">ITEM 3</button>
+                  <button class="btn btn-item">ITEM 4</button>
+                  <button class="btn btn-item">ITEM 5</button>
+                </div>
+              </div>
+              <div class="subcategory">
+                <button class="btn btn-subcat">Subcategorie 2</button>
+                <div class="items">
+                  <button class="btn btn-item">ITEM 1</button>
+                  <button class="btn btn-item">ITEM 2</button>
+                  <button class="btn btn-item">ITEM 3</button>
+                  <button class="btn btn-item">ITEM 4</button>
+                  <button class="btn btn-item">ITEM 5</button>
+                </div>
+              </div>
+              <div class="subcategory">
+                <button class="btn btn-subcat">Subcategorie 3</button>
+                <div class="items">
+                  <button class="btn btn-item">ITEM 1</button>
+                  <button class="btn btn-item">ITEM 2</button>
+                  <button class="btn btn-item">ITEM 3</button>
+                  <button class="btn btn-item">ITEM 4</button>
+                  <button class="btn btn-item">ITEM 5</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="category">
+            <button class="btn btn-cat">Categorie 2</button>
+            <div class="subcategories">
+              <div class="subcategory">
+                <button class="btn btn-subcat">Subcategorie 1</button>
+                <div class="items">
+                  <button class="btn btn-item">ITEM 1</button>
+                  <button class="btn btn-item">ITEM 2</button>
+                  <button class="btn btn-item">ITEM 3</button>
+                  <button class="btn btn-item">ITEM 4</button>
+                  <button class="btn btn-item">ITEM 5</button>
+                </div>
+              </div>
+              <div class="subcategory">
+                <button class="btn btn-subcat">Subcategorie 2</button>
+                <div class="items">
+                  <button class="btn btn-item">ITEM 1</button>
+                  <button class="btn btn-item">ITEM 2</button>
+                  <button class="btn btn-item">ITEM 3</button>
+                  <button class="btn btn-item">ITEM 4</button>
+                  <button class="btn btn-item">ITEM 5</button>
+                </div>
+              </div>
+              <div class="subcategory">
+                <button class="btn btn-subcat">Subcategorie 3</button>
+                <div class="items">
+                  <button class="btn btn-item">ITEM 1</button>
+                  <button class="btn btn-item">ITEM 2</button>
+                  <button class="btn btn-item">ITEM 3</button>
+                  <button class="btn btn-item">ITEM 4</button>
+                  <button class="btn btn-item">ITEM 5</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="category">
+            <button class="btn btn-cat">Categorie 3</button>
+            <div class="subcategories">
+              <div class="subcategory">
+                <button class="btn btn-subcat">Subcategorie 1</button>
+                <div class="items">
+                  <button class="btn btn-item">ITEM 1</button>
+                  <button class="btn btn-item">ITEM 2</button>
+                  <button class="btn btn-item">ITEM 3</button>
+                  <button class="btn btn-item">ITEM 4</button>
+                  <button class="btn btn-item">ITEM 5</button>
+                </div>
+              </div>
+              <div class="subcategory">
+                <button class="btn btn-subcat">Subcategorie 2</button>
+                <div class="items">
+                  <button class="btn btn-item">ITEM 1</button>
+                  <button class="btn btn-item">ITEM 2</button>
+                  <button class="btn btn-item">ITEM 3</button>
+                  <button class="btn btn-item">ITEM 4</button>
+                  <button class="btn btn-item">ITEM 5</button>
+                </div>
+              </div>
+              <div class="subcategory">
+                <button class="btn btn-subcat">Subcategorie 3</button>
+                <div class="items">
+                  <button class="btn btn-item">ITEM 1</button>
+                  <button class="btn btn-item">ITEM 2</button>
+                  <button class="btn btn-item">ITEM 3</button>
+                  <button class="btn btn-item">ITEM 4</button>
+                  <button class="btn btn-item">ITEM 5</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="wrapp">
+        <button class="btn btn-share">Share</button>
+        <button class="btn-add btn-add--plus">
+          <span class="content">+</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="add-element-wrapper">
+      <div class="select-element">
+        <button class="btn-add" id="add-cat">
+          <span class="content">+ Categorie</span>
+        </button>
+        <button class="btn-add" id="add-subcat">
+          <span class="content">+ Subcategorie</span>
+        </button>
+        <button class="btn-add" id="add-item">
+          <span class="content">+ Item</span>
+        </button>
+      </div>
+
+      <form method="get" class="add-cat-form">
+        <div class="title">Categorie</div>
+        <div class="subtitle">Creeaza o categorie noua!</div>
+        <div class="input-container">
+          <input id="cat-name" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="cat-name" class="placeholder">Nume categorie</label>
+        </div>
+        <button class="submit">Submit</button>
+      </form>
+
+      <form method="get" class="add-subcat-form">
+        <div class="title">Subcategorie</div>
+        <div class="subtitle">Creeaza o subcategorie noua!</div>
+        <div class="input-container">
+          <label for="sel-cat"></label><select name="category" id="sel-cat" class="input">
+            <option value="categorie1">Categorie 1</option>
+            <option value="categorie2">Categorie 2</option>
+            <option value="categorie3">Categorie 3</option>
+            <option value="categorie4">Categorie 4</option>
+            <option value="categorie5">Categorie 5</option>
+            <option value="categorie6">Categorie 6</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <input id="subcat-name" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="subcat-name" class="placeholder">Nume subcategorie</label>
+        </div>
+        <button class="submit">Submit</button>
+      </form>
+
+      <form method="get" class="add-item-form">
+        <div class="title">Iteme</div>
+        <div class="subtitle">Creeaza un item nou!</div>
+        <div class="input-container">
+          <label for="sel-cat2"></label><select name="category" id="sel-cat2" class="input">
+            <option value="categorie1">Categorie 1</option>
+            <option value="categorie2">Categorie 2</option>
+            <option value="categorie3">Categorie 3</option>
+            <option value="categorie4">Categorie 4</option>
+            <option value="categorie5">Categorie 5</option>
+            <option value="categorie6">Categorie 6</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <label for="sel-subcat"></label><select name="category" id="sel-subcat" class="input">
+            <option value="categorie1">Subcategorie 1</option>
+            <option value="categorie2">Subcategorie 2</option>
+            <option value="categorie3">Subcategorie 3</option>
+            <option value="categorie4">Subcategorie 4</option>
+            <option value="categorie5">Subcategorie 5</option>
+            <option value="categorie6">Subcategorie 6</option>
+          </select>
+        </div>
+
+        <div class="input-container">
+          <input
+            id="container-type"
+            class="input"
+            type="text"
+            placeholder=" "
+          />
+          <div class="cut"></div>
+          <label for="container-type" class="placeholder">Container type</label>
+        </div>
+        <div class="input-container">
+          <input id="images" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="images" class="placeholder">Images</label>
+        </div>
+        <div class="input-container">
+          <input id="value" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="value" class="placeholder">Value</label>
+        </div>
+        <div class="input-container">
+          <input id="country" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="country" class="placeholder">Country</label>
+        </div>
+        <div class="input-container">
+          <input id="period-of-use" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="period-of-use" class="placeholder">Period of use</label>
+        </div>
+        <div class="input-container">
+          <input id="history" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="history" class="placeholder">History</label>
+        </div>
+        <div class="input-container">
+          <input id="label" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="label" class="placeholder">Label</label>
+        </div>
+
+        <button class="submit">Submit</button>
+      </form>
+
+      <!-- <div class="add-element">
+        <div class="content">
+          <div class="element-type">
+            <button class="btn-add"><span class="content">Categorie</span></button>
+            <button class="btn-add"><span class="content">Subcategorie</span></button>
+            <button class="btn-add"><span class="content">Item</span></button>
+          </div>
+
+
+          
+
+           -->
+    </div>
+  </body>
+</html>

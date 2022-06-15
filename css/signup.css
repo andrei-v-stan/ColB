@@ -27,7 +27,7 @@ body{
   background: #22b9b9;
   border-radius: 5px 5px 0 0;
   color: #fff;
-  font-size: 40px;
+  font-size: 0px;
   font-weight: 600;
   padding: 20px 5px;
   display: flex;
@@ -89,6 +89,7 @@ form .row input:focus{
 
 .SignUp-Wrap form .button input{
   color: #fff;
+  text-align: center;
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
   background: #22b9b9;
