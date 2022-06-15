@@ -46,6 +46,7 @@ function signUp(form){
 
     if (verfPass == 1 && verfEmail== 1) {
         document.getElementById("formSignUp").submit();
+        document.getElementById("formSignUp").reset();
     }
     else {
         if (verfPass == 0 && verfEmail== 0) {
