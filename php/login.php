@@ -12,7 +12,7 @@ if (!$con) {
 }
 
 
-$qry = "CREATE TABLE IF NOT EXISTS `users` (id int(255), username varchar(255), email varchar(255), password varchar(255))";
+$qry = "CREATE TABLE IF NOT EXISTS `users` (username varchar(255), email varchar(255), password varchar(255))";
 $insert = mysqli_query($con, $qry);
 /*
 if (!$insert) {
@@ -29,10 +29,6 @@ $username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['password']; 
 
-
-$qry = "SELECT * FROM `users`";
-$insert = mysqli_query($con,$qry);
-$id = mysqli_num_rows($insert) + 1;
 
 
 $qry = "SELECT * FROM `users` WHERE username='$username'";
@@ -62,7 +58,7 @@ $vEmail = mysqli_num_rows($insert);
                 echo '</script>';
             }
 			else if($vUsername == 0 && $vEmail == 0) {
-				$qry = "INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES ('$id','$username','$email','$password')";
+				$qry = "INSERT INTO `users` (`username`, `email`, `password`) VALUES ('$username','$email','$password')";
                 $insert = mysqli_query($con,$qry);
                 /*
                 if (!$insert) {
