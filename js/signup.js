@@ -9,13 +9,14 @@ function showPass(){
             x.type = "password";
         }
     });
+
 }
 
 var verfPass = 0;
 var verfEmail = 0;
 
 var checkPass = function() {
-    if (document.getElementById('password').value == document.getElementById('confirmPassword').value) {
+    if (document.getElementById('password').value === document.getElementById('confirmPassword').value) {
         document.getElementById('passwordCheck').style.color = 'green';
         document.getElementById('passwordCheck').innerHTML = 'The passwords match';
         verfPass = 1;
@@ -27,7 +28,7 @@ var checkPass = function() {
 }
 
 var checkEmail = function() {
-    if (document.getElementById('email').value == document.getElementById('confirmEmail').value) {
+    if (document.getElementById('email').value === document.getElementById('confirmEmail').value) {
         document.getElementById('emailCheck').style.color = 'green';
         document.getElementById('emailCheck').innerHTML = 'The email addresses match';
         verfEmail = 1;
@@ -39,33 +40,88 @@ var checkEmail = function() {
 }
 
 
-function signUp(form){
+function signUp(){
 
     var newLine = "\r\n"
     var msg = ""
+    var checkEmpty = 0
 
-    if (verfPass == 1 && verfEmail== 1) {
-        document.getElementById("formSignUp").submit();
-        document.getElementById("formSignUp").reset();
+
+    if(document.getElementById('username').value === '') {
+        msg = "The Username section cannot be empty";
+        msg += newLine;
+        checkEmpty = 1;
+    }
+
+
+    if (verfPass === 1 && verfEmail=== 1 && checkEmpty === 0) {
+
+            document.getElementById("formSignUp").submit();
+            document.getElementById("formSignUp").reset();
     }
     else {
-        if (verfPass == 0 && verfEmail== 0) {
-            msg = "The email addresses do not match";
+        if (verfPass === 1 && verfEmail === 0) {
+            if(document.getElementById('email').value === '') {
+                msg += "The Email section cannot be empty";
+            }
+            else if(document.getElementById('confirmEmail').value === '') {
+                msg += "The Confirm Email section cannot be empty";
+            }
+            else{
+                msg += "The email addresses do not match";
+            }
+
+        }
+        else if (verfPass === 0 && verfEmail === 1) {
+            if(document.getElementById('password').value === '') {
+                msg += "The Password section cannot be empty";
+            }
+            else if(document.getElementById('confirmPassword').value === '') {
+                msg += "The Confirm Password section cannot be empty";
+            }
+            else{
+                msg += "The passwords do not match";
+            }
+        }
+        else if (verfPass === 0 && verfEmail=== 0) {
+
+            if(document.getElementById('email').value === '' && document.getElementById('confirmEmail').value === '') {
+                msg += "The Email sections cannot be empty";
+            }
+            else if(document.getElementById('email').value === '') {
+                msg += "The Email section cannot be empty";
+            }
+            else if(document.getElementById('confirmEmail').value === '') {
+                msg += "The Confirm Email section cannot be empty";
+            }
+            else{
+                msg += "The email addresses do not match";
+            }
+
             msg += newLine;
-            msg += "The passwords do not match";
+
+            if(document.getElementById('password').value === '' && document.getElementById('confirmPassword').value === '') {
+                msg += "The Password sections cannot be empty";
+            }
+            else if(document.getElementById('password').value === '') {
+                msg += "The Password section cannot be empty";
+            }
+            else if(document.getElementById('confirmPassword').value === '') {
+                msg += "The Confirm Password section cannot be empty";
+            }
+            else{
+                msg += "The passwords do not match";
+            }
+
         }
-        else if (verfPass == 1 && verfEmail == 0) {
-            msg = "The email addresses do not match";
-        }
-        else if (verfPass == 0 && verfEmail == 1) {
-            msg = "The passwords do not match";
-        }
-        else {
-            msg = "Other error"
+        else{
+            msg += "[Error]: Unknown case";
         }
 
         alert(msg);
+
     }
+
 
 }
 
