@@ -51,8 +51,7 @@ function signUp(){
 
     var usernameFormat = /^[0-9A-Za-z]+$/;
     var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    var passwordFormat = /^(?=.*[0-9])(?=.*[~`!@#$%^&*()_+={}:;<>,.?/'"-])[a-zA-Z0-9~`!@#$%^&*()_+={}:;<>,.?/'"-]{6,}$/;
-
+    var passwordFormat = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z~`!@#$%^&*()_+={}:;<>,.?/'"-])[a-zA-Z0-9~`!@#$%^&*()_+={}:;<>,.?/'"-]{6,}$/;
 
 
     if(document.getElementById('username').value === '') {
@@ -140,7 +139,7 @@ function signUp(){
         if((document.getElementById('password').value).match(passwordFormat) === null) {
             msg += "You have introduced an invalid password";
             msg += newLine;
-            msg += "Your password must have at least 6 characters, 1 uppercase, 1 lowercase, 1 digit and one special character";
+            msg += "Your password must have at least 6 characters, 1 digit and 1 special character";
             msg += newLine;
             validPassword = 0;
         }

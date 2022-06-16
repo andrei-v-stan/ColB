@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "form"; 
+$db = "colb";
 
 $con = new mysqli($host,$user,$pass,$db);
 if (!$con) { 
@@ -12,7 +12,7 @@ if (!$con) {
 }
 
 
-$qry = "CREATE TABLE IF NOT EXISTS `users` (id int(255), username varchar(255), email varchar(255), password varchar(255))";
+$qry = "CREATE TABLE IF NOT EXISTS `users` (id int(255), username varchar(255), email varchar(255), password varchar(255), type int(1))";
 $insert = mysqli_query($con, $qry);
 /*
 if (!$insert) {
@@ -27,7 +27,8 @@ else{
 
 $username = $_POST['username'];
 $email = $_POST['email'];
-$password = $_POST['password']; 
+$password = $_POST['password'];
+$type = 0;
 
 
 $qry = "SELECT * FROM `users`";
@@ -62,7 +63,7 @@ $vEmail = mysqli_num_rows($insert);
                 echo '</script>';
             }
 			else if($vUsername == 0 && $vEmail == 0) {
-				$qry = "INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES ('$id','$username','$email','$password')";
+				$qry = "INSERT INTO `users` (`id`, `username`, `email`, `password`, `type`) VALUES ('$id','$username','$email','$password','$type')";
                 $insert = mysqli_query($con,$qry);
                 /*
                 if (!$insert) {

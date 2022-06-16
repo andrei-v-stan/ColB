@@ -42,18 +42,18 @@
       <span>Login Form</span>
     </div>
 
-    <form action="../html/loginProcessing.html">
+    <form action="../php/login.php" method="post">
 
       <div class="row">
         <img class="img1" src="../resources/login/Person.png" alt="LoginPerson"/>
         <label>
-          <input type="text" placeholder="Username" required>
+          <input type="text" name="username" placeholder="Username" required>
         </label>
       </div>
 
       <div class="row">
         <img class="img2" src="../resources/login/Lock.png" alt="LoginLock"/>
-        <label for="showLPass"></label><input type="password" placeholder="Password" id="showLPass" required>
+        <label for="showLPass"></label><input type="password" name="password" placeholder="Password" id="showLPass" required>
       </div>
 
       <div class="showpass">

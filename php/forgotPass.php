@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "form"; 
+$db = "colb";
 
 $con = new mysqli($host,$user,$pass,$db);
 if (!$con) { 
