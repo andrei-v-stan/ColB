@@ -42,84 +42,117 @@ var checkEmail = function() {
 
 function signUp(){
 
-    var newLine = "\r\n"
-    var msg = ""
-    var checkEmpty = 0
+    var newLine = "\r\n";
+    var msg = "";
+
+    var validUsername = 1;
+    var validEmail = 1;
+    var validPassword = 1;
+
+    var usernameFormat = /^[0-9A-Za-z]+$/;
+    var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var passwordFormat = /^(?=.*[0-9])(?=.*[~`!@#$%^&*()_+={}:;<>,.?/'"-])[a-zA-Z0-9~`!@#$%^&*()_+={}:;<>,.?/'"-]{6,}$/;
+
 
 
     if(document.getElementById('username').value === '') {
         msg = "The Username section cannot be empty";
         msg += newLine;
-        checkEmpty = 1;
+        validUsername = 0;
+    }
+    else if((document.getElementById('username').value).match(usernameFormat) === null) {
+        msg += "Your Username can only contain alphanumeric characters";
+        msg += newLine;
+        validUsername = 0;
     }
 
 
-    if (verfPass === 1 && verfEmail=== 1 && checkEmpty === 0) {
+    if (verfPass === 1 && verfEmail === 0) {
 
-            document.getElementById("formSignUp").submit();
-            document.getElementById("formSignUp").reset();
-    }
-    else {
-        if (verfPass === 1 && verfEmail === 0) {
-            if(document.getElementById('email').value === '') {
-                msg += "The Email section cannot be empty";
-            }
-            else if(document.getElementById('confirmEmail').value === '') {
-                msg += "The Confirm Email section cannot be empty";
-            }
-            else{
-                msg += "The email addresses do not match";
-            }
+        validEmail = 0;
 
+        if(document.getElementById('email').value === '') {
+            msg += "The Email section cannot be empty";
         }
-        else if (verfPass === 0 && verfEmail === 1) {
-            if(document.getElementById('password').value === '') {
-                msg += "The Password section cannot be empty";
-            }
-            else if(document.getElementById('confirmPassword').value === '') {
-                msg += "The Confirm Password section cannot be empty";
-            }
-            else{
-                msg += "The passwords do not match";
-            }
-        }
-        else if (verfPass === 0 && verfEmail=== 0) {
-
-            if(document.getElementById('email').value === '' && document.getElementById('confirmEmail').value === '') {
-                msg += "The Email sections cannot be empty";
-            }
-            else if(document.getElementById('email').value === '') {
-                msg += "The Email section cannot be empty";
-            }
-            else if(document.getElementById('confirmEmail').value === '') {
-                msg += "The Confirm Email section cannot be empty";
-            }
-            else{
-                msg += "The email addresses do not match";
-            }
-
-            msg += newLine;
-
-            if(document.getElementById('password').value === '' && document.getElementById('confirmPassword').value === '') {
-                msg += "The Password sections cannot be empty";
-            }
-            else if(document.getElementById('password').value === '') {
-                msg += "The Password section cannot be empty";
-            }
-            else if(document.getElementById('confirmPassword').value === '') {
-                msg += "The Confirm Password section cannot be empty";
-            }
-            else{
-                msg += "The passwords do not match";
-            }
-
+        else if(document.getElementById('confirmEmail').value === '') {
+            msg += "The Confirm Email section cannot be empty";
         }
         else{
-            msg += "[Error]: Unknown case";
+            msg += "The email addresses do not match";
         }
 
-        alert(msg);
+    }
+    else if (verfPass === 0 && verfEmail === 1) {
 
+        validPassword = 0;
+
+        if(document.getElementById('password').value === '') {
+            msg += "The Password section cannot be empty";
+        }
+        else if(document.getElementById('confirmPassword').value === '') {
+            msg += "The Confirm Password section cannot be empty";
+        }
+        else{
+            msg += "The passwords do not match";
+        }
+    }
+    else if (verfPass === 0 && verfEmail=== 0) {
+
+        validPassword = 0;
+        validEmail = 0;
+
+        if(document.getElementById('email').value === '' && document.getElementById('confirmEmail').value === '') {
+            msg += "The Email sections cannot be empty";
+        }
+        else if(document.getElementById('email').value === '') {
+            msg += "The Email section cannot be empty";
+        }
+        else if(document.getElementById('confirmEmail').value === '') {
+            msg += "The Confirm Email section cannot be empty";
+        }
+        else{
+            msg += "The email addresses do not match";
+        }
+
+        msg += newLine;
+
+        if(document.getElementById('password').value === '' && document.getElementById('confirmPassword').value === '') {
+            msg += "The Password sections cannot be empty";
+        }
+        else if(document.getElementById('password').value === '') {
+            msg += "The Password section cannot be empty";
+        }
+        else if(document.getElementById('confirmPassword').value === '') {
+            msg += "The Confirm Password section cannot be empty";
+        }
+        else{
+            msg += "The passwords do not match";
+        }
+
+    }
+    else {
+        if((document.getElementById('email').value).match(emailFormat) === null) {
+            msg += "You have introduced an invalid email address";
+            msg += newLine;
+            validEmail = 0;
+        }
+
+        if((document.getElementById('password').value).match(passwordFormat) === null) {
+            msg += "You have introduced an invalid password";
+            msg += newLine;
+            msg += "Your password must have at least 6 characters, 1 uppercase, 1 lowercase, 1 digit and one special character";
+            msg += newLine;
+            validPassword = 0;
+        }
+    }
+
+
+    if (verfPass === 1 && verfEmail=== 1 && validUsername === 1 && validEmail === 1 && validPassword === 1) {
+        document.getElementById("formSignUp").submit();
+        document.getElementById("formSignUp").reset();
+    }
+    else {
+        alert(msg);
     }
 
 
