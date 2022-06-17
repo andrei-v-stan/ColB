@@ -1,0 +1,106 @@
+html,
+body {
+  background: hsl(222, 23%, 11%);
+  font-family: "Karla", sans-serif;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+.items {
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.item {
+  all: unset;
+  min-height: 60px;
+  padding: 10px 20px;
+  margin-bottom: 12px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  color: hsl(0, 0%, 15%);
+  position: relative;
+  transition: background-color 0.5s;
+  font-size: large;
+  background: hsl(42, 100%, 67%);
+  display: grid;
+}
+
+.item > div {
+  padding: 5px 5px;
+}
+
+.item-title {
+  font-size: x-large;
+  font-weight: bold;
+  grid-area: name;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-owner {
+  grid-area: owner;
+}
+
+.item-data {
+  grid-area: data;
+}
+
+.item-details {
+  grid-area: details;
+  font-size: medium;
+}
+
+@media screen and (max-width: 801px) {
+  .item {
+    min-width: 100%;
+    grid-template-areas:
+      "name"
+      "owner"
+      "data"
+      "details";
+    grid-template-columns: 1fr;
+  }
+
+  .item-data {
+    border-top: 1px dashed hsl(0, 0%, 15%);
+    border-bottom: 1px dashed hsl(0, 0%, 15%);
+}
+}
+
+@media screen and (min-width: 801px) {
+  .item {
+    min-width: 700px;
+    max-width: 700px;
+    grid-template-areas:
+      "name name name"
+      "owner data details";
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+
+  .item-data {
+    margin: 0 10px 0 10px;
+    border-left: 1px dashed hsl(0, 0%, 15%);
+    border-right: 1px dashed hsl(0, 0%, 15%);
+  }
+}
+
+.text {
+    color: hsl(0, 0%, 36%);
+}
+
+.item-img {
+    padding-top: 10px;
+    max-width: 250px;
+    min-width: 200px;
+    max-height: 250px;
+    min-height: 200px;
+}
