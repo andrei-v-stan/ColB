@@ -4,10 +4,11 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
+
     define('DB_HOST', 'localhost');
-    define('DB_USER', 'colectieSticleDB');
+    define('DB_USER', 'root');
     define('DB_PASSWORD', '');
-    define('DB_NAME', 'colectiesticle');
+    define('DB_NAME', 'colb');
 
     // Create connection
     $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);

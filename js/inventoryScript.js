@@ -9,7 +9,7 @@ document.addEventListener('click', e => {
     const isAddCategoryButton = e.target.matches('#add-cat > .content');
     const isAddSubcategoryButton = e.target.matches('#add-subcat > .content');
     const isAddItemButton = e.target.matches('#add-item > .content');
-    console.log(e.target);
+
     if (isCategoryButton) {
         const categoryButton = e.target;
         
@@ -74,19 +74,9 @@ document.addEventListener('click', e => {
 
     if (isShareButton) {
         const selectedItems = document.querySelectorAll('.btn-item.selected');
-        
-        //Generate share link for all selected items
-        let url = "http://localhost/php/share.php?";
-        let count = 0;
+        selectedItems.forEach(console.log);
 
-        selectedItems.forEach(item => {
-            url += 'id' + count.toString() + '=' + item.value.toString() + '&'; 
-            count++;
-        });
-        url = url.slice(0, -1);
-
-        navigator.clipboard.writeText(url);
-        alert('Link copied to clipboard');
+        //TODO: Generate share link for all selected items
     }
 
     if (isAddButton) {

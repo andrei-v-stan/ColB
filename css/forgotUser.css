@@ -11,19 +11,19 @@ body{
   width: 100%;
 }
 
-.SignUp-Container{
+.forgotUser-Container{
   max-width: 600px;
   margin: 100px auto;
   padding: 0 20px;
 }
 
-.SignUp-Wrap{
+.forgotUser-Wrap{
   background: #fff;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
 }
 
-.SignUp-Wrap .title{
+.forgotUser-Wrap .title{
   background: #22b9b9;
   border-radius: 5px 5px 0 0;
   color: #fff;
@@ -35,17 +35,17 @@ body{
   justify-content: center;
 }
 
-.SignUp-Wrap form{
+.forgotUser-Wrap form{
   padding: 25px 25px 25px 25px;
 }
 
-.SignUp-Wrap form .row{
+.forgotUser-Wrap form .row{
   height: 50px;
   margin-bottom: 15px;
   position: relative;
 }
 
-.SignUp-Wrap form .row input{
+.forgotUser-Wrap form .row input{
   height: 100%;
   width: 100%;
   outline: none;
@@ -62,23 +62,7 @@ form .row input:focus{
 }
 
 
-.SignUp-Wrap .img1 {
-  position: absolute;
-  height : 50px;
-  width : 50px;
-  padding: 5px;
-  margin : 0px auto;
-}
-
-.SignUp-Wrap .img2 {
-  position: absolute;
-  height : 50px;
-  width : 50px;
-  padding: 5px;
-  margin : 0px auto;
-}
-
-.SignUp-Wrap .img3 {
+.forgotUser-Wrap .img1 {
   position: absolute;
   height : 50px;
   width : 50px;
@@ -87,11 +71,11 @@ form .row input:focus{
 }
 
 
-.SignUp-Wrap form .button input{
+.forgotUser-Wrap form .button input{
   color: #fff;
   text-align: center;
   font-family: "Times New Roman", Times, serif;
-  font-size: 30px;
+  font-size: 25px;
   background: #22b9b9;
   margin: -5px auto;
   padding: 5px 0px 5px 5px;
@@ -103,63 +87,6 @@ form .row input:focus{
 form .button input:hover{
   background: #0c7785;
 }
-
-
-
-.showpass{
-  text-align: left;
-  margin: 10px 20px 10px 10px;
-  color: #000000;
-  font-size: 20px;
-  font-family: "Georgia", Georgia, serif;
-}
-
-.showpass .switch {
-  margin: -45px 140px auto;
-  display: inline-block;
-  height: 30px;
-  position: absolute;
-  width: 60px;
-}
-
-
-.showpass .slider {
-  position: absolute;
-  background-color: #d75858;
-  cursor: pointer;
-  top: 0; bottom: 0; left: 0; right: 0;
-  transition: .5s;
-}
-
-.showpass .slider.round {
-  border-radius: 35px;
-}
-
-.showpass .slider.round:before {
-  border-radius: 50%;
-}
-
-.showpass .slider:before {
-  position: absolute;
-  background-color: #fff;
-  content: "";
-  height: 25px;
-  width: 25px;
-  bottom: 3px; left: 4px;
-  transition: .5s;
-
-}
-
-.showpass input:checked + .slider {
-  background-color: #66bb6a;
-}
-
-.showpass input:checked + .slider:before {
-  transform: translateX(25px);
-}
-
-
-
 
 
 
@@ -192,22 +119,7 @@ form .button input:hover{
   font-size: 30px;
   font-weight: bold;
   font-family: "Georgia", Georgia, serif;
-  margin: -15px 0 -15px 0;
-}
-
-
-.emailCheck{
-  text-align : left;
-  font-size: 15px;
-  font-weight : bold;
-  margin: 0 0 10px 0;
-}
-
-.passwordCheck{
-  text-align : left;
-  font-size: 15px;
-  font-weight : bold;
-  margin: 0 0 10px 0;
+  margin: -40px 0 -15px 0;
 }
 
 
