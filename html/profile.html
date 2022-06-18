@@ -2,17 +2,15 @@
 <html lang="en">
 
 <head>
-
-    <title>Info</title>
+    <title>Your profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../resources/default/Question.ico"/>
-    <link rel="stylesheet" href="../css/default.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../resources/signup/SignUp.ico"/>
+    <link rel="stylesheet" href="../css/signup.css">
     <link rel="stylesheet" href="../css/menus.css">
     <script src="../js/menus.js"></script>
 
 </head>
-
 
 <body>
 
@@ -33,9 +31,50 @@
 
 </div>
 
-<div id="default">
-    <h1>Work In Progress</h1>
+
+<div class="SignUp-Container">
+    <div class="SignUp-Wrap">
+
+        <div class="title">
+            <span>Profile Details</span>
+        </div>
+
+        <form action="../php/profile.php" method="post">
+
+
+            <div class="row">
+                <img class="img1" src="../resources/signup/Person.png" alt="SignUpPerson"/>
+                <label>
+                    <input type="text" name="name" placeholder="Profile name" required>
+                </label>
+            </div>
+
+            <div class="row">
+                <img class="img3" src="../resources/signup/At.png" alt="SignUpAt1"/>
+                <input type="text" name="phoneNr" placeholder="Phone number" required>
+            </div>
+
+            <div class="row">
+                <img class="img3" src="../resources/signup/At.png" alt="SignUpAt2"/>
+                <input type="text" name="country" placeholder="Country of residence" required>
+            </div>
+
+            <div class="row">
+                <img class="img3" src="../resources/signup/At.png" alt="SignUpAt3"/>
+                <input type="text" name="city" placeholder="City of residence" required>
+            </div>
+
+
+            <div class="row button">
+                <input type="submit" value="Confirm details">
+            </div>
+
+
+        </form>
+
+    </div>
 </div>
+
 
 
 </body>
