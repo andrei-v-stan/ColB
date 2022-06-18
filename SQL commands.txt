@@ -1,0 +1,6 @@
+Drop table users;
+Drop table prod;
+
+
+
+UPDATE users SET type = 1 WHERE email = 'colbfii@gmail.com';

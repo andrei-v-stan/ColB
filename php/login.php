@@ -80,5 +80,4 @@ else {
 }
 
 mysqli_close($con);
-// UPDATE users SET type = 1 WHERE id = 1;
 ?>
