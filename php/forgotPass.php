@@ -12,19 +12,6 @@ if (!$con) {
 }
 
 
-$qry = "CREATE TABLE IF NOT EXISTS `users` (id int(255), username varchar(255), email varchar(255), password varchar(255))";
-$insert = mysqli_query($con, $qry);
-/*
-if (!$insert) {
-	echo "[Error] : Cannot create table <br>";
-	echo "<br>";
-}
-else{
-	echo "[Info] : Table created <br>";
-	echo "<br>";
-}
-*/
-
 
 $email = $_POST['email'];
 

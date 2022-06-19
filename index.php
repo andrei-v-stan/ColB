@@ -22,7 +22,7 @@
       echo "<br>";
       }
 
-      $qry = "CREATE TABLE IF NOT EXISTS `users` (id int(255), username varchar(255), email varchar(255), password varchar(255), type int(1), pfName varchar(255),phoneNr int(255), country varchar(255), city varchar(255))";
+      $qry = "CREATE TABLE IF NOT EXISTS `users` (id int(255), username varchar(255), email varchar(255), password varchar(255), type int(1), pfName varchar(255), phoneNr varchar(255), country varchar(255), city varchar(255))";
       $insert = mysqli_query($con, $qry);
       /*
       if (!$insert) {
@@ -35,8 +35,12 @@
       }
       */
 
-      $qry = "CREATE TABLE IF NOT EXISTS `prod` (ID int(10), Nume_prenume varchar(25), produsNume varchar(20), country varchar(10), Mun varchar(10), Oras varchar(10), Drink varchar(10), DrinkType varchar(10), Used tinyint(1), year int(4), MadeIn varchar(10), BoughtIn varchar(10), Details varchar(100), Price int(10), Exhange tinyint(1), PhoneNr int(15), imagesNr int(1), img1 varchar(50), img2 varchar(50), img3 varchar(50))";
+      $qry = "CREATE TABLE IF NOT EXISTS `prod` (prodID int(10), prodName varchar(20), drink varchar(10), drinkType varchar(10), used tinyint(1), year int(4), madeIn varchar(10), boughtIn varchar(10), details varchar(100), price int(10), exchange tinyint(1))";
       $insert = mysqli_query($con, $qry);
+
+      $qry = "CREATE TABLE IF NOT EXISTS `img` (prodID int(10), imgURL varchar(50))";
+      $insert = mysqli_query($con, $qry);
+
 
       mysqli_close($con);
 
