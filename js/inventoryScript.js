@@ -10,6 +10,8 @@ document.addEventListener('click', e => {
     const isAddSubcategoryButton = e.target.matches('#add-subcat > .content');
     const isAddItemButton = e.target.matches('#add-item > .content');
 
+    console.log(e.target);
+
     if (isCategoryButton) {
         const categoryButton = e.target;
         
