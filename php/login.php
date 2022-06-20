@@ -85,7 +85,7 @@ if ($verf == 1 && $password == $vPassword) {
         else {
             echo '<script type="text/javascript">';
             echo 'alert("You have logged in successfully");';
-            echo 'window.location.href = "../html/profile.html";';
+            echo 'window.location.href = "../php/profile.php";';
             echo '</script>';
         }
 
