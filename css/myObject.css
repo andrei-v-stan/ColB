@@ -58,12 +58,9 @@ main {
 }
 button{
   height: 50%;
-  width: 70%;
+  width: 10%;
 }
 .SelectItem{
-  background-color: black;
-  width: 90%;
-  height: 90%;
 }
 main>img{
   width: 60%;
@@ -152,6 +149,10 @@ li:nth-child(odd){
 }
 #double_li{
   height: 40%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  padding: 10px;
 }
 footer>ul{
   margin-top: 0;
