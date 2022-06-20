@@ -1,0 +1,125 @@
+
+*{
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body{
+  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("../resources/forgotPass/Bottles.png"), repeat;
+  height: 100%;
+  margin: auto;
+  width: 100%;
+}
+
+.forgotPass-Container{
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+
+.forgotPass-Wrap{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+.forgotPass-Wrap .title{
+  background: #224db9;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  padding: 20px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forgotPass-Wrap form{
+  padding: 25px 25px 25px 25px;
+}
+
+.forgotPass-Wrap form .row{
+  height: 50px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.forgotPass-Wrap form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+form .row input:focus{
+  border-color: #2245b9;
+  box-shadow: inset 0px 0px 2px 2px rgba(19, 48, 145, 0.32);
+}
+
+
+.forgotPass-Wrap .img1 {
+  position: absolute;
+  height : 50px;
+  width : 50px;
+  padding: 5px;
+  margin : 0px auto;
+}
+
+
+.forgotPass-Wrap form .button input{
+  color: #fff;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  background: #2236b9;
+  margin: -5px auto;
+  padding: 5px 0px 5px 5px;
+  border-radius: 5px;
+  border: 1px solid #2257b9;
+  cursor: pointer;
+}
+
+form .button input:hover{
+  background: #0c2e85;
+}
+
+
+
+.login {
+  background-color: #184cbd;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Georgia", Georgia, serif;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 0 0 0;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.login:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+
+.account{
+  text-align: center;
+}
+
+.accountTxt{
+  color: #000000;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Georgia", Georgia, serif;
+  margin: -40px 0 -15px 0;
+}
+
+

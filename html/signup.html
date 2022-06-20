@@ -40,19 +40,19 @@
       <span>Sign Up Form</span>
     </div>
 
-    <form action="signupProcessing.html">
+    <form id="formSignUp" action="../php/signup.php" method="post">
 
 
       <div class="row">
         <img class="img1" src="../resources/signup/Person.png" alt="SignUpPerson"/>
         <label>
-          <input type="text" placeholder="Username" required>
+          <input type="text" name="username" placeholder="Username" id="username" required>
         </label>
       </div>
 
       <div class="row">
         <img class="img3" src="../resources/signup/At.png" alt="SignUpAt1"/>
-        <label for="email"></label><input type="email" placeholder="Email" id="email" onkeyup="checkEmail()" required>
+        <label for="email"></label><input type="email" name="email" placeholder="Email" id="email" onkeyup="checkEmail()" required>
       </div>
 
       <div class="row">
@@ -66,7 +66,7 @@
 
       <div class="row">
         <img class="img2" src="../resources/signup/Lock.png" alt="SignUpLock1"/>
-        <label for="password"></label><input type="password" placeholder="Password" id="password" onkeyup="checkPass()" required>
+        <label for="password"></label><input type="password" name="password" placeholder="Password" id="password" onkeyup="checkPass()" required>
       </div>
 
       <div class="row">
@@ -88,7 +88,7 @@
       </div>
 
       <div class="row button">
-        <input type="submit" value="Sign Up">
+        <input type="reset" onclick="signUp()" value="Sign Up">
       </div>
 
       <div class="account">

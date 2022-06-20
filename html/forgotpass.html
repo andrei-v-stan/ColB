@@ -2,17 +2,15 @@
 <html lang="en">
 
 <head>
-
-    <title>Forgot Password</title>
+    <title>Forgot Pass</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../resources/default/Question.ico"/>
-    <link rel="stylesheet" href="../css/default.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../resources/forgotPass/ForgotPass.ico"/>
+    <link rel="stylesheet" href="../css/forgotPass.css">
     <link rel="stylesheet" href="../css/menus.css">
     <script src="../js/menus.js"></script>
 
 </head>
-
 
 <body>
 
@@ -33,9 +31,41 @@
 
 </div>
 
-<div id="default">
-    <h1>Work In Progress</h1>
+
+<div class="forgotPass-Container">
+    <div class="forgotPass-Wrap">
+
+        <div class="title">
+            <span>Forgot Pass</span>
+        </div>
+
+        <form id="formForgotPass" action="../php/forgotPass.php" method="post">
+
+
+            <div class="account">
+                <div class="accountTxt">
+                    <p>Enter your email address</p>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <img class="img1" src="../resources/forgotPass/At.png" alt="ForgotPassAt"/>
+                <label for="email"></label><input type="email" name="email" placeholder="Email" id="email" required>
+            </div>
+
+
+
+            <div class="row button">
+                <input type="submit" value="Recover Pass">
+            </div>
+
+
+        </form>
+
+    </div>
 </div>
+
 
 
 </body>

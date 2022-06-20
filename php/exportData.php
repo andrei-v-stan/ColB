@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Login Processing</title>
+    <title>Info</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../resources/default/Question.ico"/>

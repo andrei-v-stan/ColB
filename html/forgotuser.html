@@ -2,17 +2,15 @@
 <html lang="en">
 
 <head>
-
-    <title>Forgot Username</title>
+    <title>Forgot User</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../resources/default/Question.ico"/>
-    <link rel="stylesheet" href="../css/default.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../resources/forgotUser/ForgotUser.ico"/>
+    <link rel="stylesheet" href="../css/forgotUser.css">
     <link rel="stylesheet" href="../css/menus.css">
     <script src="../js/menus.js"></script>
 
 </head>
-
 
 <body>
 
@@ -33,9 +31,41 @@
 
 </div>
 
-<div id="default">
-    <h1>Work In Progress</h1>
+
+<div class="forgotUser-Container">
+    <div class="forgotUser-Wrap">
+
+        <div class="title">
+            <span>Forgot User</span>
+        </div>
+
+        <form id="formForgotUser" action="../php/forgotUser.php" method="post">
+
+
+            <div class="account">
+                <div class="accountTxt">
+                    <p>Enter your email address</p>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <img class="img1" src="../resources/forgotUser/At.png" alt="ForgotUserAt"/>
+                <label for="email"></label><input type="email" name="email" placeholder="Email" id="email" required>
+            </div>
+
+
+
+            <div class="row button">
+                <input type="submit" value="Recover Username">
+            </div>
+
+
+        </form>
+
+    </div>
 </div>
+
 
 
 </body>
