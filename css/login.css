@@ -18,6 +18,7 @@ body{
 }
 
 .Login-Wrap{
+  text-align: center;
   background: #fff;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
@@ -149,9 +150,10 @@ form .button input:hover{
 }
 
 
-
-
-
+.buttons-Wrap{
+  align-items: center;
+  justify-content: center;
+}
 
 .signup {
   background-color: #1899bd;
@@ -211,5 +213,7 @@ form .button input:hover{
   color: black;
   text-decoration: underline;
 }
+
+
 
 

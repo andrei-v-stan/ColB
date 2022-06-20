@@ -97,13 +97,13 @@
                                     }
                                   }
 
-                              echo 
-                                  "</div>" . 
+                              echo
+                                  "</div>" .
                                 "</div>";
                           }
                         }
-                      echo 
-                        "</div>" . 
+                      echo
+                        "</div>" .
                       "</div>";
                   }
               }
@@ -205,7 +205,7 @@
       <form action="inventory.php" method="post" class="add-item-form">
         <div class="title">Iteme</div>
         <div class="subtitle">Creeaza un item nou!</div>
-        
+
         <div class="input-container">
           <input name="owner" id="owner" class="input" type="text" placeholder=" " />
           <div class="cut"></div>
@@ -328,16 +328,16 @@
       </form>
       <?php
         if(isset($_POST['submit-item'])){
-          if(!empty($_POST['owner']) && 
-          !empty($_POST['country']) && 
-          !empty($_POST['city']) && 
-          !empty($_POST['phoneNr']) && 
-          !empty($_POST['productName']) && 
-          !empty($_POST['fabricationYear']) && 
-          !empty($_POST['madeIn']) && 
-          !empty($_POST['boughtIn']) && 
-          !empty($_POST['details']) && 
-          !empty($_POST['price']) && 
+          if(!empty($_POST['owner']) &&
+          !empty($_POST['country']) &&
+          !empty($_POST['city']) &&
+          !empty($_POST['phoneNr']) &&
+          !empty($_POST['productName']) &&
+          !empty($_POST['fabricationYear']) &&
+          !empty($_POST['madeIn']) &&
+          !empty($_POST['boughtIn']) &&
+          !empty($_POST['details']) &&
+          !empty($_POST['price']) &&
           !empty($_POST['img'])) {
             $ownerName = $_POST['owner'];
             $country = $_POST['country'];

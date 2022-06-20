@@ -2,15 +2,17 @@
 <html lang="en">
 
 <head>
-    <title>Forgot User</title>
+
+    <title>About Us</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../resources/forgotUser/ForgotUser.ico"/>
-    <link rel="stylesheet" href="../css/forgotUser.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../resources/aboutUs/AboutUs.ico"/>
+    <link rel="stylesheet" href="../css/aboutUS.css">
     <link rel="stylesheet" href="../css/menus.css">
     <script src="../js/menus.js"></script>
 
 </head>
+
 
 <body>
 
@@ -35,42 +37,54 @@
 
 </div>
 
-
-<div class="forgotUser-Container">
-    <div class="forgotUser-Wrap">
+<div class="AboutUs-Container">
+    <div class="AboutUs-Wrap">
 
         <div class="title">
-            <span>Forgot User</span>
+            <span>Want to contact us?</span>
         </div>
 
-        <form id="formForgotUser" action="../php/forgotUser.php" method="post">
-
-
-            <div class="account">
-                <div class="accountTxt">
-                    <p>Enter your email address</p>
-                </div>
-            </div>
+        <form id="formAboutUs" action="../php/AboutUs.php" method="post">
 
 
             <div class="row">
-                <img class="img1" src="../resources/forgotUser/At.png" alt="ForgotUserAt"/>
-                <label for="email"></label><input type="email" name="email" placeholder="Email" id="email" required>
+                <img class="img1" src="../resources/aboutUs/Person.png" alt="AboutUsPerson"/>
+                <label>
+                    <input type="text" name="name" placeholder="Your name" id="name">
+                </label>
             </div>
 
+            <div class="row">
+                <img class="img2" src="../resources/aboutUs/At.png" alt="AboutUsAt"/>
+                <label for="email"></label><input type="email" name="email" placeholder="Your email" id="email">
+            </div>
+
+            <div class="row">
+                <img class="img3" src="../resources/aboutUs/Question.png" alt="AboutUsQuestion"/>
+                <label>
+                    <input type="text" name="question" placeholder="Reason for contact" id="question" required>
+                </label>
+            </div>
+
+            <div class="row">
+                <textarea name="explanation" placeholder="More details / explanations here..." id="explanation" required></textarea>
+            </div>
 
 
             <div class="row button">
-                <input type="submit" value="Recover Username">
+                <input type="submit" value="Send info">
             </div>
 
+            <div class="account">
+                <div class="accountTxt">
+                    <p>If you have an account with us then introducing your name and email is optional</p>
+                </div>
+            </div>
 
         </form>
 
     </div>
 </div>
-
-
 
 </body>
 </html>

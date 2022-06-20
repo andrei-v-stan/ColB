@@ -18,6 +18,7 @@ body{
 }
 
 .forgotPass-Wrap{
+  text-align: center;
   background: #fff;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
@@ -86,27 +87,6 @@ form .row input:focus{
 
 form .button input:hover{
   background: #0c2e85;
-}
-
-
-
-.login {
-  background-color: #184cbd;
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  font-family: "Georgia", Georgia, serif;
-  text-decoration: none;
-  display: inline-block;
-  margin: 0 0 0 0;
-  padding: 10px 10px 10px 10px;
-  cursor: pointer;
-  border-radius: 12px;
-}
-
-.login:hover{
-  color: black;
-  text-decoration: underline;
 }
 
 

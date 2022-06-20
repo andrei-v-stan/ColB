@@ -5,48 +5,48 @@
 }
 
 body{
-  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("../resources/Profile/Bottles.png"), repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url("../resources/AboutUs/Bottles.png"), repeat;
   height: 100%;
   margin: auto;
   width: 100%;
 }
 
-.Profile-Container{
+.AboutUs-Container{
   max-width: 600px;
   margin: 100px auto;
   padding: 0 20px;
 }
 
-.Profile-Wrap{
+.AboutUs-Wrap{
   text-align: center;
   background: #fff;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
 }
 
-.Profile-Wrap .title{
-  background: #22b98c;
+.AboutUs-Wrap .title{
+  background: #4822b9;
   border-radius: 5px 5px 0 0;
   color: #fff;
   font-size: 40px;
   font-weight: 600;
-  padding: 20px 5px;
+  padding: 20px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.Profile-Wrap form{
+.AboutUs-Wrap form{
   padding: 25px 25px 25px 25px;
 }
 
-.Profile-Wrap form .row{
+.AboutUs-Wrap form .row{
   height: 50px;
   margin-bottom: 15px;
   position: relative;
 }
 
-.Profile-Wrap form .row input{
+.AboutUs-Wrap form .row input{
   height: 100%;
   width: 100%;
   outline: none;
@@ -58,12 +58,28 @@ body{
 }
 
 form .row input:focus{
-  border-color: #22b996;
-  box-shadow: inset 0px 0px 2px 2px rgba(19, 145, 107, 0.32);
+  border-color: #4322b9;
+  box-shadow: inset 0px 0px 2px 2px rgba(65, 19, 145, 0.32);
+}
+
+.AboutUs-Wrap form .row textarea{
+  height: 250%;
+  width: 100%;
+  outline: none;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+form .row textarea:focus{
+  border-color: #5422b9;
+  box-shadow: inset 0px 0px 2px 2px rgba(65, 19, 145, 0.32);
 }
 
 
-.Profile-Wrap .img1 {
+.AboutUs-Wrap .img1 {
   position: absolute;
   height : 50px;
   width : 50px;
@@ -71,38 +87,38 @@ form .row input:focus{
   margin : 0px auto;
 }
 
-.Profile-Wrap .img2 {
+.AboutUs-Wrap .img2 {
   position: absolute;
-  height : 45px;
-  width : 45px;
+  height : 50px;
+  width : 50px;
   padding: 5px;
-  margin : 2px 0 0 5px;
+  margin : 0px auto;
 }
 
-.Profile-Wrap .img3 {
+.AboutUs-Wrap .img3 {
   position: absolute;
-  height : 48px;
-  width : 48px;
+  height : 50px;
+  width : 55px;
   padding: 5px;
-  margin : 1px 0 0 3px;
+  margin : 0px auto;
 }
 
 
-.Profile-Wrap form .button input{
+.AboutUs-Wrap form .button input{
   color: #fff;
   text-align: center;
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
-  background: #22b991;
-  margin: 10px auto;
+  background: #5422b9;
+  margin: 75px auto;
   padding: 5px 0px 5px 5px;
   border-radius: 5px;
-  border: 1px solid #22b98c;
+  border: 1px solid #4322b9;
   cursor: pointer;
 }
 
 form .button input:hover{
-  background: #0c8561;
+  background: #260c85;
 }
 
 
@@ -113,10 +129,11 @@ form .button input:hover{
 
 .accountTxt{
   color: #000000;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   font-family: "Georgia", Georgia, serif;
-  margin: -30px 0 -10px 0;
+  margin: 85px 0 -30px 0;
 }
+
 
 
