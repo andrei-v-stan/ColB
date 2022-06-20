@@ -119,4 +119,22 @@ form .button input:hover{
   margin: -30px 0 -10px 0;
 }
 
+.Profile-Wrap .title2{
+  background: #22b98c;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 20px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.accountTxt2{
+  color: #000000;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: "Georgia", Georgia, serif;
+  margin: -15px 0 10px 0;
+}
