@@ -19,7 +19,10 @@
         <div class="categories">
           <?php
               #Display all categories
-              $query1 = "SELECT id, categorie FROM categorii";
+              $uid = $_COOKIE['id'];
+              
+              // $query1 = "SELECT id, categorie FROM categorii";
+              $query1 = "SELECT categorii.id, categorii.categorie FROM `colectie` JOIN `categorii` ON colectie.CategoryID = categorii.id WHERE colectie.uid = $uid";
               $response1 = mysqli_query($con, $query1);
               if($response1){
                   while($row = mysqli_fetch_array($response1)) {
@@ -31,7 +34,8 @@
                         "<button class='btn btn-cat'>$cat</button>" .
                         '<div class="subcategories">';
                         #Display all subcategories
-                        $query2 = "SELECT id, subcategorie FROM subcategorii  WHERE `catID` = $catID";
+                        // $query2 = "SELECT id, subcategorie FROM subcategorii  WHERE `catID` = $catID";
+                        $query2 = "SELECT subcategorii.id, subcategorii.subcategorie FROM `colectie` JOIN `subcategorii` ON colectie.SubcategoryID = subcategorii.id WHERE colectie.uid = $uid AND subcategorii.catID = $catID";
                         $response2 = mysqli_query($con, $query2);
                         if($response2){
                           while($row2 = mysqli_fetch_array($response2)) {
@@ -43,7 +47,8 @@
                                   "<button class='btn btn-subcat'>$subcat</button>" .
                                   '<div class="items">';
                                   #Display all items
-                                  $query3 = "SELECT * FROM `colectie` WHERE `CategoryID` = $catID AND `SubcategoryID` = $subcatID ";
+                                  // $query3 = "SELECT * FROM `colectie` WHERE `CategoryID` = $catID AND `SubcategoryID` = $subcatID ";
+                                  $query3 = "SELECT * FROM `colectie` JOIN `users` ON colectie.uid = users.id WHERE colectie.uid = $uid AND colectie.CategoryID = $catID AND colectie.SubcategoryID = $subcatID";
                                   $response3 = mysqli_query($con, $query3);
                                   if($response3){
                                     while($row3 = mysqli_fetch_array($response3)) {
@@ -53,10 +58,10 @@
                                       // echo "<button class='btn btn-item' value='$itemID'>
                                       //   $itemName
                                       // </button>";
-                                      $OwnerName = $row3['OwnerName'];
-                                      $Country = $row3['Country'];
-                                      $City = $row3['City'];
-                                      $PhoneNr = $row3['PhoneNr'];
+                                      $OwnerName = $row3['pfName'];
+                                      $Country = $row3['country'];
+                                      $City = $row3['city'];
+                                      $PhoneNr = $row3['phoneNr'];
                                       $ProductName = $row3['ProductName'];
                                       $CategoryID = $row3['CategoryID'];
                                       $Category = mysqli_fetch_array(mysqli_query($con, "SELECT categorie FROM categorii  WHERE `id` = $CategoryID"))['categorie'];
