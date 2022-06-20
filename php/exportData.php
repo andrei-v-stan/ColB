@@ -1,3 +1,28 @@
+<?php
+
+include('connectDB.php');
+
+$id = $_COOKIE['id'];
+
+$qry = "SELECT type FROM `users` WHERE id='$id'";
+        $resultSet = mysqli_query($con,$qry);
+
+        if (mysqli_num_rows($resultSet) > 0) {
+          while($row = mysqli_fetch_assoc($resultSet)){
+               $type = print_r($row['type'], TRUE);
+            }
+        }
+
+if ($type == 0) {
+    echo '<script type="text/javascript">';
+    echo 'alert("Only admins are allowed here!");';
+    echo 'window.location.href = "../html/profile.html";';
+    echo '</script>';
+}
+
+mysqli_close($con);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

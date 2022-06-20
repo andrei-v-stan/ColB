@@ -17,9 +17,6 @@
 <body>
     <div class="items">
         <?php
-
-        echo('xxx');
-
         #Get query params from url(the id of the selected items)
         $queries = array();
         parse_str($_SERVER['QUERY_STRING'], $queries);

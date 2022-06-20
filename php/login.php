@@ -79,7 +79,7 @@ if ($verf == 1 && $password == $vPassword) {
     if($vType == 1) {
             echo '<script type="text/javascript">';
             echo 'alert("You have logged in successfully");';
-            echo 'window.location.href = "../html/profileAdmin.html";';
+            echo 'window.location.href = "../php/exportData.php";';
             echo '</script>';
         }
         else {

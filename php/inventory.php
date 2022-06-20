@@ -26,8 +26,8 @@
                       $catID = $row['id'];
                       $cat = $row['categorie'];
 
-                      echo
-                      "<div class='category'>" .
+                      echo 
+                      "<div class='category'>" . 
                         "<button class='btn btn-cat'>$cat</button>" .
                         '<div class="subcategories">';
                         #Display all subcategories
@@ -38,7 +38,7 @@
                               $subcatID = $row2['id'];
                               $subcat = $row2['subcategorie'];
 
-                              echo
+                              echo 
                                 '<div class="subcategory">' .
                                   "<button class='btn btn-subcat'>$subcat</button>" .
                                   '<div class="items">';
@@ -70,7 +70,7 @@
                                       $Exchange = $row3['Exchange'] ? 'Yes' : 'No';
                                       $Price = $row3['Price'];
                                       $img = $row3['img'];
-                                      echo
+                                      echo 
                                       "<button class='btn-item' value='$itemID'>
                                           <div class='item-title'>$ProductName</div>
                                           <div class='item-owner'>
@@ -97,13 +97,13 @@
                                     }
                                   }
 
-                              echo
-                                  "</div>" .
+                              echo 
+                                  "</div>" . 
                                 "</div>";
                           }
                         }
-                      echo
-                        "</div>" .
+                      echo 
+                        "</div>" . 
                       "</div>";
                   }
               }
@@ -205,7 +205,7 @@
       <form action="inventory.php" method="post" class="add-item-form">
         <div class="title">Iteme</div>
         <div class="subtitle">Creeaza un item nou!</div>
-
+        
         <div class="input-container">
           <input name="owner" id="owner" class="input" type="text" placeholder=" " />
           <div class="cut"></div>
@@ -328,16 +328,16 @@
       </form>
       <?php
         if(isset($_POST['submit-item'])){
-          if(!empty($_POST['owner']) &&
-          !empty($_POST['country']) &&
-          !empty($_POST['city']) &&
-          !empty($_POST['phoneNr']) &&
-          !empty($_POST['productName']) &&
-          !empty($_POST['fabricationYear']) &&
-          !empty($_POST['madeIn']) &&
-          !empty($_POST['boughtIn']) &&
-          !empty($_POST['details']) &&
-          !empty($_POST['price']) &&
+          if(!empty($_POST['owner']) && 
+          !empty($_POST['country']) && 
+          !empty($_POST['city']) && 
+          !empty($_POST['phoneNr']) && 
+          !empty($_POST['productName']) && 
+          !empty($_POST['fabricationYear']) && 
+          !empty($_POST['madeIn']) && 
+          !empty($_POST['boughtIn']) && 
+          !empty($_POST['details']) && 
+          !empty($_POST['price']) && 
           !empty($_POST['img'])) {
             $ownerName = $_POST['owner'];
             $country = $_POST['country'];
