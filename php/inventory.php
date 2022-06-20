@@ -19,10 +19,15 @@
         <div class="categories">
           <?php
               #Display all categories
-              $uid = $_COOKIE['id'];
+             
+                $uid = $_COOKIE['id'];
+                if(!isset($uid)){
+                  header("Location: ../html/login.html");
+                  exit();
+              }
               
               // $query1 = "SELECT id, categorie FROM categorii";
-              $query1 = "SELECT categorii.id, categorii.categorie FROM `colectie` JOIN `categorii` ON colectie.CategoryID = categorii.id WHERE colectie.uid = $uid";
+              $query1 = "SELECT DISTINCT categorii.id, categorii.categorie FROM `colectie` JOIN `categorii` ON colectie.CategoryID = categorii.id WHERE colectie.uid = $uid";
               $response1 = mysqli_query($con, $query1);
               if($response1){
                   while($row = mysqli_fetch_array($response1)) {
@@ -35,7 +40,7 @@
                         '<div class="subcategories">';
                         #Display all subcategories
                         // $query2 = "SELECT id, subcategorie FROM subcategorii  WHERE `catID` = $catID";
-                        $query2 = "SELECT subcategorii.id, subcategorii.subcategorie FROM `colectie` JOIN `subcategorii` ON colectie.SubcategoryID = subcategorii.id WHERE colectie.uid = $uid AND subcategorii.catID = $catID";
+                        $query2 = "SELECT DISTINCT subcategorii.id, subcategorii.subcategorie FROM `colectie` JOIN `subcategorii` ON colectie.SubcategoryID = subcategorii.id WHERE colectie.uid = $uid AND subcategorii.catID = $catID";
                         $response2 = mysqli_query($con, $query2);
                         if($response2){
                           while($row2 = mysqli_fetch_array($response2)) {
@@ -48,12 +53,13 @@
                                   '<div class="items">';
                                   #Display all items
                                   // $query3 = "SELECT * FROM `colectie` WHERE `CategoryID` = $catID AND `SubcategoryID` = $subcatID ";
-                                  $query3 = "SELECT * FROM `colectie` JOIN `users` ON colectie.uid = users.id WHERE colectie.uid = $uid AND colectie.CategoryID = $catID AND colectie.SubcategoryID = $subcatID";
+                                  $query3 = "SELECT colectie.id AS itemID, pfName, country, city, phoneNr, ProductName, CategoryID, SubcategoryID, Used, FabricationYear, MadeIn, BoughtIn, Details, Exchange, Price, img
+                                    FROM `colectie` JOIN `users` ON colectie.uid = users.id WHERE colectie.uid = $uid AND colectie.CategoryID = $catID AND colectie.SubcategoryID = $subcatID";
                                   $response3 = mysqli_query($con, $query3);
                                   if($response3){
                                     while($row3 = mysqli_fetch_array($response3)) {
                                       // echo "<script>alert('BUN')</script>";
-                                      $itemID = $row3['id'];
+                                      $itemID = $row3['itemID'];
                                       // $itemName = $row3['ProductName'];
                                       // echo "<button class='btn btn-item' value='$itemID'>
                                       //   $itemName
@@ -211,7 +217,7 @@
         <div class="title">Iteme</div>
         <div class="subtitle">Creeaza un item nou!</div>
         
-        <div class="input-container">
+        <!-- <div class="input-container">
           <input name="owner" id="owner" class="input" type="text" placeholder=" " />
           <div class="cut"></div>
           <label for="owner" class="placeholder">Owner</label>
@@ -230,7 +236,7 @@
           <input name="phoneNr" id="phoneNr" class="input" type="text" placeholder=" " />
           <div class="cut"></div>
           <label for="phoneNr" class="placeholder">Phone Number</label>
-        </div>
+        </div> -->
         <div class="input-container">
           <input name="productName" id="productName" class="input" type="text" placeholder=" " />
           <div class="cut"></div>
@@ -333,21 +339,17 @@
       </form>
       <?php
         if(isset($_POST['submit-item'])){
-          if(!empty($_POST['owner']) && 
-          !empty($_POST['country']) && 
-          !empty($_POST['city']) && 
-          !empty($_POST['phoneNr']) && 
-          !empty($_POST['productName']) && 
+          if(!empty($_POST['productName']) && 
           !empty($_POST['fabricationYear']) && 
           !empty($_POST['madeIn']) && 
           !empty($_POST['boughtIn']) && 
           !empty($_POST['details']) && 
           !empty($_POST['price']) && 
           !empty($_POST['img'])) {
-            $ownerName = $_POST['owner'];
-            $country = $_POST['country'];
-            $city = $_POST['city'];
-            $phoneNr = $_POST['phoneNr'];
+            // $ownerName = $_POST['owner'];
+            // $country = $_POST['country'];
+            // $city = $_POST['city'];
+            // $phoneNr = $_POST['phoneNr'];
             $productName = $_POST['productName'];
             $category = $_POST['i-category'];
             $subcategory = $_POST['i-subcategory'];
@@ -360,7 +362,7 @@
             $price = $_POST['price'];
             $img = $_POST['img'];
             try {
-              $query = "INSERT INTO `colectie` (`id`, `OwnerName`, `Country`, `City`, `PhoneNr`, `ProductName`, `CategoryID`, `SubcategoryID`, `Used`, `FabricationYear`, `MadeIn`, `BoughtIn`, `Details`, `Exchange`, `Price`, `img`) VALUES (NULL, '$ownerName', '$country', '$city', '$phoneNr', '$productName', '$category', '$subcategory', '$used', '$fabricationYear', '$madeIn', '$boughtIn', '$details', '$exchange', '$price', '$img')";
+              $query = "INSERT INTO `colectie` (`id`, `uid`, `ProductName`, `CategoryID`, `SubcategoryID`, `Used`, `FabricationYear`, `MadeIn`, `BoughtIn`, `Details`, `Exchange`, `Price`, `img`) VALUES (NULL, '$uid', '$productName', '$category', '$subcategory', '$used', '$fabricationYear', '$madeIn', '$boughtIn', '$details', '$exchange', '$price', '$img')";
               mysqli_query($con, $query);
             } catch(Exception $e) {}
           }
