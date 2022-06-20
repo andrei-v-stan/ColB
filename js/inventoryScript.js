@@ -9,7 +9,7 @@ document.addEventListener('click', e => {
     const isAddCategoryButton = e.target.matches('#add-cat > .content');
     const isAddSubcategoryButton = e.target.matches('#add-subcat > .content');
     const isAddItemButton = e.target.matches('#add-item > .content');
-    console.log(e.target);
+
     if (isCategoryButton) {
         const categoryButton = e.target;
         
@@ -76,7 +76,8 @@ document.addEventListener('click', e => {
         const selectedItems = document.querySelectorAll('.btn-item.selected');
         
         //Generate share link for all selected items
-        let url = "http://localhost/php/share.php?";
+        let origin = window.location.protocol + '//' + window.location.host;
+        let url = origin + "/php/share.php?";
         let count = 0;
 
         selectedItems.forEach(item => {

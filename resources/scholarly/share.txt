@@ -1,0 +1,2 @@
+Pe baza parametrilor din url se afiseaza itemele selectate.
+id* este id-ul unic al uni item. url-ul contine id-urile itemelor selectate.
