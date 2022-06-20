@@ -1,7 +1,8 @@
 <?php
       include('php/connectDB.php');
 
-        $qry = "CREATE TABLE IF NOT EXISTS `users` (id int(255), username varchar(255), email varchar(255), password varchar(255), type int(1), pfName varchar(255), phoneNr varchar(255), country varchar(255), city varchar(255))";
+        // $qry = "CREATE TABLE IF NOT EXISTS `users` (id int(255), username varchar(255), email varchar(255), password varchar(255), type int(1), pfName varchar(255), phoneNr varchar(255), country varchar(255), city varchar(255))";
+        $qry = "CREATE TABLE IF NOT EXISTS `users` (`id` int(255) unsigned NOT NULL AUTO_INCREMENT,`username` varchar(255) DEFAULT NULL,`email` varchar(255) DEFAULT NULL,`password` varchar(255) DEFAULT NULL,`type` int(1) DEFAULT NULL,`pfName` varchar(255) DEFAULT NULL,`phoneNr` varchar(255) DEFAULT NULL,`country` varchar(255) DEFAULT NULL,`city` varchar(255) DEFAULT NULL,PRIMARY KEY (`id`))DEFAULT CHARSET=utf8mb4";
         $insert = mysqli_query($con, $qry);
         /*
         if (!$insert) {

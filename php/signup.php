@@ -41,7 +41,7 @@ $vEmail = mysqli_num_rows($insert);
                 echo '</script>';
             }
 			else if($vUsername == 0 && $vEmail == 0) {
-				$qry = "INSERT INTO `users` (`id`, `username`, `email`, `password`, `type`) VALUES ('$id','$username','$email','$password','$type')";
+				$qry = "INSERT INTO `users` (`username`, `email`, `password`, `type`) VALUES ('$username','$email','$password','$type')";
                 $insert = mysqli_query($con,$qry);
                 /*
                 if (!$insert) {
