@@ -55,3 +55,58 @@ function focusF() {
     document.getElementById('menuShortcut-foreground').style.zIndex = -1;
     document.getElementById('menuShortcut-background').style.zIndex = 1;
 }
+
+
+
+function transformPf() {
+    login();
+    profile();
+    inventory();
+}
+
+function transformBackPf() {
+    loginBack();
+    profileBack();
+    inventoryBack();
+}
+
+function login() {
+    let x = document.getElementById("login");
+    x.style.WebkitTransform = 'translateX(0px) translateY(70px)';
+}
+
+function profile() {
+    let x = document.getElementById("profile");
+    x.style.WebkitTransform = 'translateX(0px) translateY(130px)';
+}
+
+function inventory() {
+    let x = document.getElementById("inventory");
+    x.style.WebkitTransform = 'translateX(0px) translateY(190px)';
+}
+
+function loginBack() {
+    let x = document.getElementById("login");
+    x.style.WebkitTransform = 'translateX(0px) translateY(0px)';
+}
+
+function profileBack() {
+    let x = document.getElementById("profile");
+    x.style.WebkitTransform = 'translateX(0px) translateY(0px)';
+}
+
+function inventoryBack() {
+    let x = document.getElementById("inventory");
+    x.style.WebkitTransform = 'translateX(0px) translateY(0px)';
+}
+
+
+function focusPfB() {
+    document.getElementById('menuProfile-foreground').style.zIndex = 1;
+    document.getElementById('menuProfile-background').style.zIndex = -1;
+}
+
+function focusPfF() {
+    document.getElementById('menuProfile-foreground').style.zIndex = -1;
+    document.getElementById('menuProfile-background').style.zIndex = 1;
+}
