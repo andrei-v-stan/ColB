@@ -149,6 +149,10 @@ li:nth-child(odd){
 }
 #double_li{
   height: 40%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  padding: 10px;
 }
 footer>ul{
   margin-top: 0;
