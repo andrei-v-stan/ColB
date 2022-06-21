@@ -1,6 +1,6 @@
 
 function showPass(){
-    const fields = [password, confirmPassword]
+    const fields = [password, confirmPassword];
 
     fields.forEach( x => {
         if (x.type === "password") {
@@ -25,7 +25,7 @@ var checkPass = function() {
         document.getElementById('passwordCheck').innerHTML = 'The passwords do not match';
         verfPass = 0;
     }
-}
+};
 
 var checkEmail = function() {
     if (document.getElementById('email').value === document.getElementById('confirmEmail').value) {
@@ -37,7 +37,7 @@ var checkEmail = function() {
         document.getElementById('emailCheck').innerHTML = 'The email addresses do not match';
         verfEmail = 0;
     }
-}
+};
 
 
 function signUp(){
