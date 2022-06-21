@@ -74,9 +74,20 @@ document.addEventListener('click', e => {
 
     if (isShareButton) {
         const selectedItems = document.querySelectorAll('.btn-item.selected');
-        selectedItems.forEach(console.log);
+        
+        //Generate share link for all selected items
+        let origin = window.location.protocol + '//' + window.location.host;
+        let url = origin + "/php/share.php?";
+        let count = 0;
 
-        //TODO: Generate share link for all selected items
+        selectedItems.forEach(item => {
+            url += 'id' + count.toString() + '=' + item.value.toString() + '&'; 
+            count++;
+        });
+        url = url.slice(0, -1);
+
+        navigator.clipboard.writeText(url);
+        alert('Link copied to clipboard');
     }
 
     if (isAddButton) {

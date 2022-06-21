@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>About Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../resources/aboutUs/AboutUs.ico"/>
+    <link rel="stylesheet" href="../css/aboutUS.css">
+    <link rel="stylesheet" href="../css/menus.css">
+    <script src="../js/menus.js"></script>
+
+</head>
+
+
+<body>
+
+
+<div class="containerM">
+
+    <div class="menuShortcut">
+
+        <button id="menuShortcut-foreground" onclick="focusF(); transform()" class="menuShortcut-button" title="Click to open the shortcuts menu"></button>
+        <button id="menuShortcut-background" onclick="focusB(); transformBack()" class="menuShortcut-button" title="Click to close the menu"></button>
+        <div class="menuShortcut-Search" id="search" onclick="openWindow('../html/search.html','_self');" title="Click to open the search webpage"></div>
+        <div class="menuShortcut-Post" id="post" onclick="openWindow('../html/post.html','_self');" title="Click to open the post webpage"></div>
+        <div class="menuShortcut-Info" id="info" onclick="openWindow('../html/aboutUs.html','_self');" title="Click to open the about us webpage"></div>
+
+    </div>
+
+    <button id="menuProfile-foreground" onclick="focusPfF(); transformPf()" class="menuProfile-button" title="Click to open the profile menu"></button>
+    <button id="menuProfile-background" onclick="focusPfB(); transformBackPf()" class="menuProfile-button" title="Click to close the menu"></button>
+    <div class="menuProfile-Login" id="login" onclick="openWindow('../html/login.html','_self');" title="Click to open the login webpage"></div>
+    <div class="menuProfile-Profile" id="profile" onclick="openWindow('../php/profile.php','_self');" title="Click to open the profile webpage"></div>
+    <div class="menuProfile-Inventory" id="inventory" onclick="openWindow('../php/inventory.php','_self');" title="Click to open the inventory webpage"></div>
+
+</div>
+
+<div class="AboutUs-Container">
+    <div class="AboutUs-Wrap">
+        <div class="account">
+
+            <div class="title">
+                <span>About us</span>
+            </div>
+
+            <div class="title3">
+                <span>Who are we?</span>
+            </div>
+
+            <div class="account">
+                <div class="accountTxt3">
+                    <p><em>Stan Andrei-Vladut, Visnevschi Vladislav, Anton Emanuel,</em> just a group of college students from the Faculty of Computer Science Iasi (<a href="https://goo.gl/maps/Qj9a9BCBPRbiButN6">location</a>) (<a href="https://www.info.uaic.ro/en/home-page-2/">website</a>) </p>
+                </div>
+            </div>
+
+            <div class="title2">
+                <span>What is this project for?</span>
+            </div>
+
+            <div class="account">
+                <div class="accountTxt4">
+                    <p> Collecting Bottles on Web is a tool that we have created as our project for Web Technologies, Created due to the lack of a platform for those with a passion for containers </p>
+                </div>
+            </div>
+
+            <div class="account">
+                <div class="accountTxt5">
+                    <p> (yes, oddly specific, we know) </p>
+                </div>
+            </div>
+
+            <div class="title2">
+                <span>How does this web app work?</span>
+            </div>
+
+            <div class="account">
+                <div class="accountTxt4">
+                    <p> Answers to such questions can be found in the <a href="../html/scholarly.html">Scholarly</a> page, in this html page you will find all the details about the project </p>
+                </div>
+            </div>
+            <div class="account">
+                <div class="accountTxt5">
+                    <p> (how does it work exactly, what functionalities does it have, etc) </p>
+                </div>
+            </div>
+
+
+            <div class="title2">
+                <span>Other info</span>
+            </div>
+            <div class="account">
+                <div class="accountTxt3">
+                    <p> If you can't find the explanation to some specific question, or if you want to ask us anything, you can use the form below </p>
+                </div>
+            </div>
+
+            <div class="title4">
+                <span>↓   ↓   ↓</span>
+            </div>
+            <br>
+
+        </div>
+    </div>
+</div>
+
+<div class="AboutUs-Container">
+    <div class="AboutUs-Wrap">
+
+        <div class="title">
+            <span>Want to contact us?</span>
+        </div>
+
+        <form id="formAboutUs" action="../php/aboutUs.php" method="post">
+
+
+            <div class="row">
+                <img class="img1" src="../resources/aboutUs/Person.png" alt="AboutUsPerson"/>
+                <label>
+                    <input type="text" name="name" placeholder="Your name" id="name">
+                </label>
+            </div>
+
+            <div class="row">
+                <img class="img2" src="../resources/aboutUs/At.png" alt="AboutUsAt"/>
+                <label for="email"></label><input type="email" name="email" placeholder="Your email" id="email">
+            </div>
+
+            <div class="row">
+                <img class="img3" src="../resources/aboutUs/Question.png" alt="AboutUsQuestion"/>
+                <label>
+                    <input type="text" name="question" placeholder="Reason for contact" id="question" required>
+                </label>
+            </div>
+
+            <div class="row">
+                <label>
+                    <textarea name="explanation" placeholder="More details / explanations here..." id="explanation" required></textarea>
+                </label>
+            </div>
+
+
+            <div class="row button">
+                <input type="submit" value="Send info">
+            </div>
+
+            <div class="account">
+                <div class="accountTxt">
+                    <p>If you have an account with us then introducing your name and email is optional</p>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>

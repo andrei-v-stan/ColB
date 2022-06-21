@@ -1,6 +1,7 @@
 <?php
-  require_once('mysqli_connect.php');
+  include('connectDB.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,19 +23,20 @@
 
         foreach ($queries as $id) {
             #Get and diplay selected items
-            $query = "SELECT * FROM `colectie` WHERE `id` = $id";
-            $response = mysqli_query($conn, $query);
+            // $query = "SELECT * FROM `colectie` WHERE `id` = $id";
+            $query = "SELECT * FROM `colectie` JOIN `users` ON colectie.uid = users.id WHERE colectie.id = $id";
+            $response = mysqli_query($con, $query);
             if ($response) {
                 while ($row = mysqli_fetch_array($response)) {
-                    $OwnerName = $row['OwnerName'];
-                    $Country = $row['Country'];
-                    $City = $row['City'];
-                    $PhoneNr = $row['PhoneNr'];
+                    $OwnerName = $row['pfName'];
+                    $Country = $row['country'];
+                    $City = $row['city'];
+                    $PhoneNr = $row['phoneNr'];
                     $ProductName = $row['ProductName'];
                     $CategoryID = $row['CategoryID'];
-                    $Category = mysqli_fetch_array(mysqli_query($conn, "SELECT categorie FROM categorii  WHERE `id` = $CategoryID"))['categorie'];
+                    $Category = mysqli_fetch_array(mysqli_query($con, "SELECT categorie FROM categorii  WHERE `id` = $CategoryID"))['categorie'];
                     $SubcategoryID = $row['SubcategoryID'];
-                    $Subcategory = mysqli_fetch_array(mysqli_query($conn, "SELECT subcategorie FROM subcategorii  WHERE `id` = $SubcategoryID"))['subcategorie'];
+                    $Subcategory = mysqli_fetch_array(mysqli_query($con, "SELECT subcategorie FROM subcategorii  WHERE `id` = $SubcategoryID"))['subcategorie'];
                     $Used = $row['Used'] ? 'Yes' : 'No';
                     $FabricationYear = $row['FabricationYear'];
                     $MadeIn = $row['MadeIn'];
@@ -70,6 +72,8 @@
                 }
             }
         }
+
+        mysqli_close($con);
         ?> 
     </div>
 </body>

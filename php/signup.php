@@ -1,27 +1,12 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "colb";
-
-$con = new mysqli($host,$user,$pass,$db);
-if (!$con) { 
-	echo "[Error] : Cannot connect to the database <br>";
-	echo "<br>";
-}
-
+include('connectDB.php');
 
 
 $username = $_POST['username'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 $type = 0;
-
-
-$qry = "SELECT * FROM `users`";
-$insert = mysqli_query($con,$qry);
-$id = mysqli_num_rows($insert) + 1;
 
 
 $qry = "SELECT * FROM `users` WHERE username='$username'";
@@ -51,7 +36,7 @@ $vEmail = mysqli_num_rows($insert);
                 echo '</script>';
             }
 			else if($vUsername == 0 && $vEmail == 0) {
-				$qry = "INSERT INTO `users` (`id`, `username`, `email`, `password`, `type`) VALUES ('$id','$username','$email','$password','$type')";
+				$qry = "INSERT INTO `users` (`username`, `email`, `password`, `type`) VALUES ('$username','$email','$password','$type')";
                 $insert = mysqli_query($con,$qry);
                 /*
                 if (!$insert) {

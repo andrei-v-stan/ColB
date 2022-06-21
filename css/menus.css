@@ -89,9 +89,11 @@
     background-size: 100px 100px;
 }
 
+
+
 .menuProfile-button {
     position: absolute;
-    right: 3px;
+    right: 1%;
     top: 10px;
     width: 70px;
     height: 70px;
@@ -104,3 +106,65 @@
     overflow: hidden;
     cursor: pointer;
 }
+
+#menuProfile-foreground {
+    z-index: 1;
+}
+
+#menuProfile-background {
+    z-index: -1;
+}
+
+.menuProfile-Login {
+    position: absolute;
+    right: 1.5%;
+    top: 15px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 1.0s;
+    background-image: url('../resources/menu/LoginPfR.png'), linear-gradient(#196dcc, #439db7);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px #282b2d solid;
+    background-size: 55px 55px;
+}
+
+.menuProfile-Profile {
+    position: absolute;
+    right: 1.5%;
+    top: 15px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 1.5s;
+    background-image: url('../resources/menu/ProfilePfR.png'), linear-gradient(#196dcc, #439db7);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px #282b2d solid;
+    background-size: 55px 55px;
+}
+
+.menuProfile-Inventory {
+    position: absolute;
+    right: 1.5%;
+    top: 15px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 1.5s;
+    background-image: url('../resources/menu/InventoryPfR.png'), linear-gradient(#196dcc, #439db7);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px #282b2d solid;
+    background-size: 55px 55px;
+}
+
+
+

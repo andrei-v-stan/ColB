@@ -1,5 +1,5 @@
 <?php
-  require_once('mysqli_connect.php');
+  require_once('connectDB.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +19,16 @@
         <div class="categories">
           <?php
               #Display all categories
-              $query1 = "SELECT id, categorie FROM categorii";
-              $response1 = mysqli_query($conn, $query1);
+             
+                $uid = $_COOKIE['id'];
+                if(!isset($uid)){
+                  header("Location: ../html/login.html");
+                  exit();
+              }
+              
+              // $query1 = "SELECT id, categorie FROM categorii";
+              $query1 = "SELECT DISTINCT categorii.id, categorii.categorie FROM `colectie` JOIN `categorii` ON colectie.CategoryID = categorii.id WHERE colectie.uid = $uid";
+              $response1 = mysqli_query($con, $query1);
               if($response1){
                   while($row = mysqli_fetch_array($response1)) {
                       $catID = $row['id'];
@@ -31,8 +39,9 @@
                         "<button class='btn btn-cat'>$cat</button>" .
                         '<div class="subcategories">';
                         #Display all subcategories
-                        $query2 = "SELECT id, subcategorie FROM subcategorii  WHERE `catID` = $catID";
-                        $response2 = mysqli_query($conn, $query2);
+                        // $query2 = "SELECT id, subcategorie FROM subcategorii  WHERE `catID` = $catID";
+                        $query2 = "SELECT DISTINCT subcategorii.id, subcategorii.subcategorie FROM `colectie` JOIN `subcategorii` ON colectie.SubcategoryID = subcategorii.id WHERE colectie.uid = $uid AND subcategorii.catID = $catID";
+                        $response2 = mysqli_query($con, $query2);
                         if($response2){
                           while($row2 = mysqli_fetch_array($response2)) {
                               $subcatID = $row2['id'];
@@ -43,25 +52,27 @@
                                   "<button class='btn btn-subcat'>$subcat</button>" .
                                   '<div class="items">';
                                   #Display all items
-                                  $query3 = "SELECT * FROM `colectie` WHERE `CategoryID` = $catID AND `SubcategoryID` = $subcatID ";
-                                  $response3 = mysqli_query($conn, $query3);
+                                  // $query3 = "SELECT * FROM `colectie` WHERE `CategoryID` = $catID AND `SubcategoryID` = $subcatID ";
+                                  $query3 = "SELECT colectie.id AS itemID, pfName, country, city, phoneNr, ProductName, CategoryID, SubcategoryID, Used, FabricationYear, MadeIn, BoughtIn, Details, Exchange, Price, img
+                                    FROM `colectie` JOIN `users` ON colectie.uid = users.id WHERE colectie.uid = $uid AND colectie.CategoryID = $catID AND colectie.SubcategoryID = $subcatID";
+                                  $response3 = mysqli_query($con, $query3);
                                   if($response3){
                                     while($row3 = mysqli_fetch_array($response3)) {
                                       // echo "<script>alert('BUN')</script>";
-                                      $itemID = $row3['id'];
+                                      $itemID = $row3['itemID'];
                                       // $itemName = $row3['ProductName'];
                                       // echo "<button class='btn btn-item' value='$itemID'>
                                       //   $itemName
                                       // </button>";
-                                      $OwnerName = $row3['OwnerName'];
-                                      $Country = $row3['Country'];
-                                      $City = $row3['City'];
-                                      $PhoneNr = $row3['PhoneNr'];
+                                      $OwnerName = $row3['pfName'];
+                                      $Country = $row3['country'];
+                                      $City = $row3['city'];
+                                      $PhoneNr = $row3['phoneNr'];
                                       $ProductName = $row3['ProductName'];
                                       $CategoryID = $row3['CategoryID'];
-                                      $Category = mysqli_fetch_array(mysqli_query($conn, "SELECT categorie FROM categorii  WHERE `id` = $CategoryID"))['categorie'];
+                                      $Category = mysqli_fetch_array(mysqli_query($con, "SELECT categorie FROM categorii  WHERE `id` = $CategoryID"))['categorie'];
                                       $SubcategoryID = $row3['SubcategoryID'];
-                                      $Subcategory = mysqli_fetch_array(mysqli_query($conn, "SELECT subcategorie FROM subcategorii  WHERE `id` = $SubcategoryID"))['subcategorie'];
+                                      $Subcategory = mysqli_fetch_array(mysqli_query($con, "SELECT subcategorie FROM subcategorii  WHERE `id` = $SubcategoryID"))['subcategorie'];
                                       $Used = $row3['Used'] ? 'Yes' : 'No';
                                       $FabricationYear = $row3['FabricationYear'];
                                       $MadeIn = $row3['MadeIn'];
@@ -148,7 +159,7 @@
           if(!empty($cathegory)){
             try {
               $query = "INSERT INTO `categorii` (`id`, `categorie`) VALUES (NULL, '$cathegory')";
-              mysqli_query($conn, $query);
+              mysqli_query($con, $query);
             } catch(Exception $e) {}
           }
         }
@@ -163,7 +174,7 @@
           <select name="category" id="sel-cat" class="input">
             <?php
               $query = "SELECT id, categorie FROM categorii";
-              $response = mysqli_query($conn, $query);
+              $response = mysqli_query($con, $query);
               if($response){
                   while($row = mysqli_fetch_array($response)) {
                       $id = $row['id'];
@@ -190,7 +201,7 @@
               try {
                 $subcathegory = $_POST["subcat--name"];
                 $query = "INSERT INTO `subcategorii` (`catID`, `subcategorie`, `id`) VALUES ('$catID', '$subcathegory', NULL)";
-                mysqli_query($conn, $query);
+                mysqli_query($con, $query);
               } catch(Exception $e) {}
             } else {
               echo '<script>alert("Enter a name for the subcategory")</script>';
@@ -206,7 +217,7 @@
         <div class="title">Iteme</div>
         <div class="subtitle">Creeaza un item nou!</div>
         
-        <div class="input-container">
+        <!-- <div class="input-container">
           <input name="owner" id="owner" class="input" type="text" placeholder=" " />
           <div class="cut"></div>
           <label for="owner" class="placeholder">Owner</label>
@@ -225,7 +236,7 @@
           <input name="phoneNr" id="phoneNr" class="input" type="text" placeholder=" " />
           <div class="cut"></div>
           <label for="phoneNr" class="placeholder">Phone Number</label>
-        </div>
+        </div> -->
         <div class="input-container">
           <input name="productName" id="productName" class="input" type="text" placeholder=" " />
           <div class="cut"></div>
@@ -235,7 +246,7 @@
           <select name="i-category" id="sel-cat2" class="input">
           <?php
               $query = "SELECT id, categorie FROM categorii";
-              $response = mysqli_query($conn, $query);
+              $response = mysqli_query($con, $query);
               if($response){
                   while($row = mysqli_fetch_array($response)) {
                       $id = $row['id'];
@@ -252,7 +263,7 @@
           <select name="i-subcategory" id="sel-subcat" class="input">
           <?php
             $query = "SELECT id, subcategorie FROM subcategorii";
-            $response = mysqli_query($conn, $query);
+            $response = mysqli_query($con, $query);
             if($response){
                 while($row = mysqli_fetch_array($response)) {
                     $id = $row['id'];
@@ -264,7 +275,7 @@
               //   $catID = $_POST["i-category"];
 
               //   $query = "SELECT id, subcategorie FROM subcategorii WHERE `catID` = $catID";
-              //   $response = mysqli_query($conn, $query);
+              //   $response = mysqli_query($con, $query);
               //   if($response){
               //       while($row = mysqli_fetch_array($response)) {
               //           $id = $row['id'];
@@ -328,21 +339,17 @@
       </form>
       <?php
         if(isset($_POST['submit-item'])){
-          if(!empty($_POST['owner']) && 
-          !empty($_POST['country']) && 
-          !empty($_POST['city']) && 
-          !empty($_POST['phoneNr']) && 
-          !empty($_POST['productName']) && 
+          if(!empty($_POST['productName']) && 
           !empty($_POST['fabricationYear']) && 
           !empty($_POST['madeIn']) && 
           !empty($_POST['boughtIn']) && 
           !empty($_POST['details']) && 
           !empty($_POST['price']) && 
           !empty($_POST['img'])) {
-            $ownerName = $_POST['owner'];
-            $country = $_POST['country'];
-            $city = $_POST['city'];
-            $phoneNr = $_POST['phoneNr'];
+            // $ownerName = $_POST['owner'];
+            // $country = $_POST['country'];
+            // $city = $_POST['city'];
+            // $phoneNr = $_POST['phoneNr'];
             $productName = $_POST['productName'];
             $category = $_POST['i-category'];
             $subcategory = $_POST['i-subcategory'];
@@ -355,8 +362,8 @@
             $price = $_POST['price'];
             $img = $_POST['img'];
             try {
-              $query = "INSERT INTO `colectie` (`id`, `OwnerName`, `Country`, `City`, `PhoneNr`, `ProductName`, `CategoryID`, `SubcategoryID`, `Used`, `FabricationYear`, `MadeIn`, `BoughtIn`, `Details`, `Exchange`, `Price`, `img`) VALUES (NULL, '$ownerName', '$country', '$city', '$phoneNr', '$productName', '$category', '$subcategory', '$used', '$fabricationYear', '$madeIn', '$boughtIn', '$details', '$exchange', '$price', '$img')";
-              mysqli_query($conn, $query);
+              $query = "INSERT INTO `colectie` (`id`, `uid`, `ProductName`, `CategoryID`, `SubcategoryID`, `Used`, `FabricationYear`, `MadeIn`, `BoughtIn`, `Details`, `Exchange`, `Price`, `img`) VALUES (NULL, '$uid', '$productName', '$category', '$subcategory', '$used', '$fabricationYear', '$madeIn', '$boughtIn', '$details', '$exchange', '$price', '$img')";
+              mysqli_query($con, $query);
             } catch(Exception $e) {}
           }
         }
