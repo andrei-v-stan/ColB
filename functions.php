@@ -41,7 +41,6 @@ function mainObj($currentID, $conn){
   foreach($result as $row) {
     $obj['name'] = $row['produsNume'];
     $obj['user'] = $row['Nume_prenume'];
-    $obj['src'] = $row['img1'];
     $obj['country'] = $row['country'];
     $obj['Mun'] = $row['Mun'];
     $obj['oras'] = $row['Oras'];
@@ -55,10 +54,9 @@ function mainObj($currentID, $conn){
     $obj['price'] = $row['Price'];
     $obj['Ex'] = $row['Exhange'];
     $obj['Nr'] = $row['PhoneNr'];
-    //echo $row['ID'];
-    //echo "<br>";
-    //echo print_r($row);       // Print the entire row data
-    //echo "<br>";
+    $obj['img1'] = $row['img1'];
+    $obj['img2'] = $row['img2'];
+    $obj['img3'] = $row['img3'];
   }
   return $obj;
 }

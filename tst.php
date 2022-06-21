@@ -52,7 +52,7 @@ $myObj = mainObj($r, $conn);
   <img id = "big_img" onclick="nextImg()" src="1.png" alt="imagine">
   <main>
     <button onclick="prevImg()"></button>
-    <img id = "image_display" src="<?php echo $myObj['src'];?>" alt="imagine" onclick="showImg()">
+    <img id = "image_display" src="<?php echo $myObj['img1'];?>" alt="imagine" onclick="showImg()">
     <button onclick="nextImg()">></button>
   </main>
   
@@ -130,32 +130,32 @@ $myObj = mainObj($r, $conn);
   let index = 0
   function nextImg() {
     if (index==0) {
-        document.getElementById("image_display").src = "2.png";  
-        document.getElementById("big_img").src = "2.png";  
+        document.getElementById("image_display").src = "<?php echo $myObj['img2'];?>";  
+        document.getElementById("big_img").src = "<?php echo $myObj['img2'];?>";  
         index++;
       }else if (index==1) {
-        document.getElementById("image_display").src = "3.png";    
-        document.getElementById("big_img").src = "3.png";
+        document.getElementById("image_display").src = "<?php echo $myObj['img3'];?>";    
+        document.getElementById("big_img").src = "<?php echo $myObj['img3'];?>";
         index++;
       }else if (index ==2){
-        document.getElementById("image_display").src = "1.png";
-        document.getElementById("big_img").src = "1.png";
+        document.getElementById("image_display").src = "<?php echo $myObj['img1'];?>";
+        document.getElementById("big_img").src = "<?php echo $myObj['img1'];?>";
         index = 0;
       }
   };
   function prevImg(){
     console.debug(index)
     if (index==0) {
-      document.getElementById("image_display").src = "3.png";
-      document.getElementById("big_img").src = "3.png";
+      document.getElementById("image_display").src = "<?php echo $myObj['img3'];?>";
+      document.getElementById("big_img").src = "<?php echo $myObj['img3'];?>";
       index = 2;   
     }else if (index ==1) {
-      document.getElementById("image_display").src = "1.png";
-      document.getElementById("big_img").src = "1.png";
+      document.getElementById("image_display").src = "<?php echo $myObj['img1'];?>";
+      document.getElementById("big_img").src = "<?php echo $myObj['img1'];?>";
       index--;   
     }else if (index ==2) {
-      document.getElementById("image_display").src = "2.png";
-      document.getElementById("big_img").src = "2.png";
+      document.getElementById("image_display").src = "<?php echo $myObj['img2'];?>";
+      document.getElementById("big_img").src = "<?php echo $myObj['img2'];?>";
       index--;   
     }
   };
