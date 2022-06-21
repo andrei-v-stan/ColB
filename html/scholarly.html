@@ -12,7 +12,7 @@
 
     <body prefix="schema: http://schema.org" style="font-family: 'Times New Roman', Times, serif; font-size: 15pt;">
         <header>
-            <h1>Class Manager</h1>
+            <h1>ColB</h1>
         </header>
             <div role="contentinfo">
                 <ol role="directory">
@@ -37,25 +37,40 @@
                         </a>
                             <ol role="directory">
                                 <li>
-                                    <a href="#shortcuts"><span>4.1 </span>Menu shortcuts</a>
+                                    <a href="#search"><span>4.1 </span>Search</a>
                                 </li>
                                 <li>
-                                    <a href="#login"><span>4.2 </span>Login </a>
+                                    <a href="#results"><span>4.2 </span>Results</a>
                                 </li>
                                 <li>
-                                    <a href="#signup"><span>4.3 </span>Sign-Up</a>
+                                    <a href="#product"><span>4.3 </span>Product</a>
                                 </li>
                                 <li>
-                                    <a href="#post"><span>4.4 </span>Post</a>
+                                    <a href="#inventory"><span>4.4 </span>Inventory</a>
                                 </li>
                                 <li>
-                                    <a href="#search"><span>4.5 </span>Search</a>
+                                    <a href="#index"><span>4.5 </span>Index / Home page</a>
                                 </li>
                                 <li>
-                                    <a href="#index"><span>4.6 </span>Index</a>
+                                    <a href="#menu"><span>4.6 </span>Menu shortcuts</a>
                                 </li>
                                 <li>
-                                    <a href="#inventory"><span>4.7 </span>Inventory</a>
+                                    <a href="#signup"><span>4.7 </span>SignUp</a>
+                                </li>
+                                <li>
+                                    <a href="#login"><span>4.8 </span>Login</a>
+                                </li>
+                                <li>
+                                    <a href="#forgot"><span>4.9 </span>Forgot User / Pass</a>
+                                </li>
+                                <li>
+                                    <a href="#profile"><span>4.10 </span>Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#aboutUs"><span>4.11 </span>About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#exportData"><span>4.12 </span>Export Data</a>
                                 </li>
                             </ol>
                     </li>
@@ -179,73 +194,172 @@
                     In this part of the document we will present the functionalities of our application and how they work (what files do what and so on).
                 </p>
 
-                    <section typeof="sa:MaterialsAndMethods" id="shortcuts" role="doc-chapter">
-                        <h3><span>4.1 </span>Menu shortcuts</h3>
-                        <div class="row">
-                            <div class="column">
-                                <img src="../resources/scholarly/shortcutMenu.png" alt="scholarlyMenu" style="width:100%; height:75%;">
-                            </div>
-                            <div class="column">
-                                <img src="../resources/scholarly/menus.png" alt="scholarlyMenus" style="width:250%; height:50%;">
-                            </div>
+
+                <section typeof="sa:MaterialsAndMethods" id="search" role="doc-chapter">
+                    <h3><span>4.1 </span>Search</h3>
+                    <img src="../resources/scholarly/search.png" alt="Search Page" style="width:50%; height:50%">
+                    <p>
+                        This is the Search Page where we put an Input for the user to search for the desired items and a small menu where are shown some random itmes in case that user get's interested in any. It has just the main information about the product and a link to the item itself in case that user wants to know more about it
+                    </p>
+                </section>
+
+                <section typeof="sa:MaterialsAndMethods" id="results" role="doc-chapter">
+                    <h3><span>4.2 </span>Results</h3>
+                    <img src="../resources/scholarly/results.png" alt="Results Page" style="width:50%; height:50%">
+                    <p>
+                        This is the Results page, where user can see the results of his search and sort them in case that he is looking for the cheapest or most expensive items, it also has section with some other random selected items.The results are at maximum 4 on the same page, and user can also travel through pages to find the desired item. The results also have some basic information about the items.
+                    </p>
+                </section>
+                <section typeof="sa:MaterialsAndMethods" id="product" role="doc-chapter">
+                    <h3><span>4.3 </span>Product</h3>
+                    <img src="../resources/scholarly/product.png" alt="Product Page" style="width:50%; height:50%">
+                    <p>
+                        This is the Product page, where users can see a more detailed information about the items they search for and also find some information about the Seller. It also has some more random options on the right side. In case that Link was modified it redirects user to page 404, where he is told that the item with the ID he is searching for does not exist.
+                    </p>
+                </section>
+                <section typeof="sa:MaterialsAndMethods" id="inventory" role="doc-chapter">
+                    <h3><span>4.4 </span>Inventory</h3>
+                    <p>
+                        This is the inventory page, a <a href="../html/inventory.html">webpage</a> in which the users can share and write down inventory items, by the use of <a href="../js/inventoryScript.js">this js file</a> and <a href="../js/inventoryHandleTouch.js">this js file</a>
+                    </p>
+                </section>
+
+                <section typeof="sa:MaterialsAndMethods" id="index" role="doc-chapter">
+                    <h3><span>4.5 </span>Index page </h3>
+                    <img src="../resources/scholarly/home.png" alt="ScholarlyIndex" style="width:50%; height:50%">
+                    <p>
+                        This is the start page, a simple <a href="../index.php">webpage</a> in which the users can choose to go to one of the given pages, which has been designed and animated using <a href="../css/index.css">this css</a>. However, there is a small trick to this simple welcome, on access we also compile <a href="../php/createTables.php">this php file</a>, which signals the host to check for any missing tables within its database, if there are any missing they will automatically be created, thus making the webapp very easy to change host machines.
+                    </p>
+                    <p>
+                        Aside of this webpage, all webpages that need any access to the database - include / import a simple php <a href="../php/connectDB.php">file</a>, that does just that (creates a temporary connection).
+                    </p>
+                </section>
+
+                <section typeof="sa:MaterialsAndMethods" id="menu" role="doc-chapter">
+                    <h3><span>4.6 </span>Menu shortcuts</h3>
+                    <div class="row">
+                        <div class="column">
+                            <img src="../resources/scholarly/menu1.png" alt="scholarlyMenu1" style="width:300px; height:200px;">
                         </div>
-                        <p>
-                            The menu and profile shortcuts are on most pages and are designed using <a href="../css/menus.css">this css</a> and the animation of the menu being done using <a href="../js/menus.js">this js</a>.
-                        </p>
-                    </section>
+                        <div class="column">
+                            <img src="../resources/scholarly/menu2.png" alt="scholarlyMenu2" style="width:100px; height:200px;">
+                        </div>
+                    </div>
+                    <p>
+                        The menu and profile shortcuts are on most pages, designed via <a href="../css/menus.css">this css</a> in which every button is customized, each icon is set towards a specific size, each button having it's own desired parameters. The animation of the other sub-buttons are done using <a href="../js/menus.js">this js</a>, however the each main button has it's own twin. Once you click on a main button, it executes the animation and also sneakily changes its place with its twin (via a z-index), the twin does a reverse animation on click and once again changes place.
+                    </p>
+                </section>
 
-                    <section typeof="sa:MaterialsAndMethods" id="login" role="doc-chapter">
-                        <h3><span>4.2 </span>Login</h3>
-                        <img src="../resources/scholarly/login.png" alt="ScholarlyLogin" style="width:50%; height:50%">
-                        <p>
-                            The login page is a simple form in which the users and admin will be able to connect via <a href="../html/login.html">this page</a>, which has been designed using <a href="../css/login.css">this css</a> and the functionalities such as showing your password using <a href="../js/login.js">this js</a>. The data given will be checked with the database to see if the account exists and then processed accordingly.
-                        </p>
-                        <p>
-                            Aside of these elements, the login page also has 3 buttons that redirect you accordingly (to the sign-up, forgot username and forgot password form), the page also has menu and profile shortcuts.
-                        </p>
-                    </section>
+                <section typeof="sa:MaterialsAndMethods" id="signup" role="doc-chapter">
+                    <h3><span>4.7 </span>Sign-Up</h3>
+                    <div class="row">
+                        <div class="column">
+                    <img src="../resources/scholarly/signup1.png" alt="ScholarlySignUp1" style="width:100%; height:100%;">
+                        </div>
+                        <div class="column">
+                            <img src="../resources/scholarly/signup2.png" alt="ScholarlySignUp2" style="width:100%; height:100%;">
+                        </div>
+                    </div>
+                    <p>
+                        The sign-up page is mostly made of the sign up form, its elements (from the text boxes and icons, to the writing and slide bar) are designed via <a href="../css/signup.css">this css</a>. The emails and passwords are evaluated in real time, the passwords are hidden or shown (via *** characters) at the press of a button configured using <a href="../js/signup.js">this js</a>.
+                    </p>
+                    <p>
+                        Aside of the elements seen in the given pictures, there are a lot of things going on in the background. Due to some complications with sending the form data, all the checks (matching passwords / emails), non-empty fields and fields containing character specifics (such as having a @ followed by .com, or having a minimum of x characters - while having at least 1 special, 1 digit, etc), are all checked in the same javascript file using several functions and regexes, alerting the user of whatever issues there are (all the issues that are within the case at once, so the user doesn't need to guess).
+                    </p>
+                    <p>
+                        Once the form details are acceptable they are also parsed using <a href="../php/signup.php">this php</a>, where the username and email are first checked to see if there are any identical ones present in the database, if so the user is alerted and they can reintroduce once more the details. If not, then the user is welcomed with a successful account creation and redirected to the login page.
+                    </p>
+                </section>
 
-                    <section typeof="sa:MaterialsAndMethods" id="signup" role="doc-chapter">
-                        <h3><span>4.3 </span>Sign-Up</h3>
-                        <img src="../resources/scholarly/signup.png" alt="ScholarlySignUp" style="width:50%; height:50%">
-                        <p>
-                            The signup page is a simple form in which the users will be able to create a account via <a href="../html/signup.html">this page</a>, which has been designed using <a href="../css/signup.css">this css</a> and the functionalities such as checking if your emails and passwords match, using <a href="../js/signup.js">this js</a>. The data given will be checked with the database to see if the account exists and if not, then processed accordingly.
-                        </p>
-                        <p>
-                            Aside of these elements, the signup page also has a button which returns you to the login page along with the menu and profile shortcuts.
-                        </p>
-                    </section>
+                <section typeof="sa:MaterialsAndMethods" id="login" role="doc-chapter">
+                    <h3><span>4.8 </span>Login</h3>
+                        <div class="column">
+                            <img src="../resources/scholarly/login.png" alt="ScholarlyLogin" style="width:100%; height:100%;">
+                        </div>
+                    <br>
+                    <p>
+                        Similarly to the sign-up page, its elements are designed via <a href="../css/login.css">this css</a> and a much simpler javascript <a href="../js/login.js">file</a> is used to hide and unhide the password, a difference being the addition of a few buttons.
+                    </p>
+                    <br>
+                    <p>
+                       However, unlike it's javascript file, the php <a href="../php/login.php">file</a> is far more complex. Here once again there are checks made with the database and a few conveniences are in place (for example the "username" to login can either be the created username or email). But there is an issue in comparison to the signup, yes we do send a successful login message and redirect the user, however how do we know how to access automatically further user data without constantly asking for the login details?
+                    </p>
+                    <p>
+                        Well we implement a cookie that remembers the user's id, the cookie is removed after 24h, or it is modified / renewed through a same / different login. Once a user wants to connect to a different account we check for a existing cookie, if there is one, we give it the time of 0, afterwards we remember the new cookie with the respective id, thus making everything seemless for the user.
+                    </p>
+                </section>
 
-                    <section typeof="sa:MaterialsAndMethods" id="post" role="doc-chapter">
-                        <h3><span>4.4 </span>Post</h3>
-                        <img src="../resources/scholarly/post.png" alt="ScholarlyPost" style="width:50%; height:50%">
-                        <p>
-                            The post page is a simple form in which the users and admin will to write down and upload pictures in regard to their container of choice using <a href="../html/post.html">this page</a>, which has been designed using <a href="../css/post.css">this css</a> and the functionalities such as scrolling through images using <a href="../js/post.js">this js</a>.
-                        </p>
-                    </section>
+                <section typeof="sa:MaterialsAndMethods" id="forgot" role="doc-chapter">
+                    <h3><span>4.9 </span>Forgot User / Pass</h3>
+                    <div class="row">
+                        <div class="column">
+                            <img src="../resources/scholarly/forgotUser.png" alt="ScholarlyForgotUser" style="width:100%; height:100%;">
+                        </div>
+                        <div class="column">
+                            <img src="../resources/scholarly/forgotPass.png" alt="ScholarlyForgotPass" style="width:100%; height:100%;">
+                        </div>
+                    </div>
+                    <br>
+                    <p>
+                        These 2 twin webpages are pretty self-explanatory, designed via this <a href="../css/forgotUser.css">css</a> and this <a href="../css/forgotPass.css">css</a>, so simple and yet there is much more behind the scenes.
+                    </p>
+                    <p>
+                        On submission each webpage compiles a php file that helps recover the <a href="../php/forgotUser.php">user</a> or the <a href="../php/forgotPass.php">password</a>. Once the email is entered the data is sent to the respective php file, which then checks for any username / password associated to the email within the database, if there is none, then the user will be prompted a invalid email address message. However, if the email is valid, then the host automatically sends a email to the given address containing the requested information, afterwards redirecting the user to the login page.
+                    </p>
+                    <p>
+                        The host has its own email address dedicated to such issues configured a smtp, for example if you are using Xampp you must configure the "php.ini" and "sendmail.ini" files. If you want to use a Google account for this then you have to secure and configure your Google account, as well as using a one time password (this can no longer be done easily through a simple option of allowing 3rd party apps to your account - feature removed on the 20th of May 2022).
+                    </p>
+                </section>
 
-                    <section typeof="sa:MaterialsAndMethods" id="search" role="doc-chapter">
-                        <h3><span>4.5 </span>Search</h3>
-                        <img src="../resources/scholarly/search.png" alt="ScholarlySearch" style="width:50%; height:50%">
-                        <p>
-                            The search page is a simple webpage in which the users and admin will to write down and upload pictures in regard to their container of choice using <a href="../html/search.html">this page</a>, which has been designed using <a href="../css/search.css">this css</a>.
-                        </p>
-                    </section>
 
-                    <section typeof="sa:MaterialsAndMethods" id="index" role="doc-chapter">
-                        <h3><span>4.6 </span>Index page </h3>
-                        <img src="../resources/scholarly/home.png" alt="ScholarlySearch" style="width:50%; height:50%">
-                        <p>
-                            This is the start page, a simple <a href="../index.php">webpage</a> in which the users can choose to go to one of the given pages, which has been designed and animated using <a href="../css/index.css">this css</a>.
-                        </p>
-                    </section>
+                <section typeof="sa:MaterialsAndMethods" id="profile" role="doc-chapter">
+                    <h3><span>4.10 </span>Profile</h3>
+                    <div class="column">
+                        <img src="../resources/scholarly/profile.png" alt="ScholarlyProfile" style="width:100%; height:100%;">
+                    </div>
+                    <br>
+                    <p>
+                        Once the user logs in they are redirected to this webpage, where they can insert whatever profile details they'd like, these details afterwards being used in their posts and inventory, thus reducing the chances of spam / fraudulent posts.
+                    </p>
+                    <p>
+                        When the user confirms the given details they will be automatically update the table below, showing the user a preview of the data, if they dislike it or a mistake was made, they can enter and submit new details.
+                    </p>
+                    <br>
+                    <p>
+                        As usual, the webpage is designed via a <a href="../css/profile.css">css</a>, however this time, since we need real time data to show, the webpage and the information requests are implemented at once in one <a href="../php/profile.php">php</a>, the submission of the introduced information are done via a different <a href="../php/profileR.php">php</a>.
+                    </p>
+                </section>
 
-                    <section typeof="sa:MaterialsAndMethods" id="inventory" role="doc-chapter">
-                        <h3><span>4.7 </span>Inventory</h3>
-                        <p>
-                            This is the inventory page, a <a href="../html/inventory.html">webpage</a> in which the users can share and write down inventory items, by the use of <a href="../js/inventoryScript.js">this js file</a> and <a href="../js/inventoryHandleTouch.js">this js file</a>
-                        </p>
-                    </section>
+                <section typeof="sa:MaterialsAndMethods" id="aboutUs" role="doc-chapter">
+                    <h3><span>4.11 </span>About Us</h3>
+                    <div class="row">
+                        <div class="column">
+                            <img src="../resources/scholarly/aboutUs1.png" alt="ScholarlyAboutUs1" style="width:100%; height:100%;">
+                        </div>
+                        <div class="column">
+                            <img src="../resources/scholarly/aboutUs2.png" alt="ScholarlyAboutUs2" style="width:100%; height:100%;">
+                        </div>
+                    </div>
+                    <br>
+                    <p>
+                        This is a more informative webpage, as usual, designed using a <a href="../css/aboutUS.css">css</a>. This webpage has also a few perks, any user logged in or not can check these details and send a contact form, the difference in between logged in and non-logged in users being that for logged in users the Name and Email are automatically extracted from the database.
+                    </p>
+                    <p>
+                        Similarly to the forgotten details pages, it uses a smtp to send the details, the information being parsed via a php <a href="../php/aboutUs.php">file</a> where the given information is rewritten in a different format so that the ColB team can easily understand from whom the email is and what is that they want to communicate.
+                    </p>
+                </section>
+
+                <section typeof="sa:MaterialsAndMethods" id="exportData" role="doc-chapter">
+                    <h3><span>4.12 </span>Export Data</h3>
+                    <div class="column">
+                        <img src="../resources/scholarly/exportData.png" alt="ScholarlyExportData" style="width:100%; height:100%;">
+                    </div>
+                    <p>
+                        Here is a WIP (work in progress) webpage that was meant to export statistics regarding users inventories / posts. However, something interesting is still configured here, the page is configured in a php <a href="../php/exportData.php">file</a> that checks if the user that accessed this page is a admin or not (using the cookie mentioned previously).
+                    </p>
+                    <br>
+                    <p> If they are not a admin (type 1) then they are automatically redirected to the login page.</p>
+                </section>
 
             </section>
 

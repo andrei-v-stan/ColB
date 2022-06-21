@@ -1,4 +1,0 @@
-Itemele sunt afisate pe categorii si subcategorii. 
-Putem selecta iteme, subcategorii(itemele din subcategorie selectandu-se automat), sau categorii(sucategoriile si itemele respective selectandu-se automat). 
-Itemele selectate pot fi distribuite printr-un link generat. 
-Putem crea categorii noi, subcategorii noi pentru o anumita categorie si iteme noi incadrandu-se in anumite categorii si subcategorii.
