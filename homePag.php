@@ -15,6 +15,7 @@ if(isset($_GET['search'])){
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="homePag.css">
 	<link rel="stylesheet" type="text/css" href="menus.css">
+	<link rel="stylesheet" type="text/css" href="scroll.css">
 	<title>Home</title>
 </head>
 <body>
@@ -101,6 +102,7 @@ if(isset($_GET['search'])){
 		<h3>Au Lucrat : Visnevschi Vladislav, Stan Andrei-Vladut , Anton Emanuel</h3>
 	</footer>
 </div>
+<?php mysqli_close($conn);?>
 </body>
 <script type="text/javascript" src="menus.js"></script>
 </html>

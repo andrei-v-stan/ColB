@@ -13,7 +13,8 @@ $myObj = mainObj($r, $conn);
 <html lang="en">
 <head>
   <link rel="stylesheet" type="text/css" href="myObject.css">
-    <link rel="stylesheet" type="text/css" href="menus.css">
+  <link rel="stylesheet" type="text/css" href="menus.css">
+  <link rel="stylesheet" type="text/css" href="scroll.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>myObj</title>
@@ -170,5 +171,6 @@ $myObj = mainObj($r, $conn);
   }
 </script>
 <script type="text/javascript" src="menus.js"></script>
+<?php mysqli_close($conn);?>
 </body>
 </html>

@@ -13,6 +13,7 @@ $s = $_GET['sort'];
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="Spage.css">
   <link rel="stylesheet" type="text/css" href="menus.css">
+  <link rel="stylesheet" type="text/css" href="scroll.css">
   <title><?php echo $r?></title>
 </head>
 <body>
@@ -90,6 +91,7 @@ $s = $_GET['sort'];
     </div>
   </div>  
 </div>
+<?php mysqli_close($conn);?>
 </body>
 <script type="text/javascript" src="menus.js"></script>
 </html>
